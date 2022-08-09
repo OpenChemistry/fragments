@@ -1,0 +1,147 @@
+{
+  "atoms": {
+    "coords": {
+      "3d": [
+        0.9625,
+        0.0994,
+        -0.1005,
+        2.3156,
+        -0.0674,
+        0.0751,
+        3.0433,
+        -1.2198,
+        0.2489,
+        0.5281,
+        1.0735,
+        -0.3,
+        0.2865,
+        -0.7456,
+        -0.1666,
+        2.9023,
+        0.8624,
+        0.088,
+        2.5732,
+        -2.1964,
+        0.2787,
+        4.1114,
+        -1.2,
+        0.4395,
+        2.107133333333333,
+        -0.3959333333333333,
+        0.0745
+      ]
+    },
+    "elements": {
+      "number": [
+        6,
+        6,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "labels": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "layer": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "selected": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        0,
+        3,
+        0,
+        4,
+        1,
+        2,
+        1,
+        5,
+        2,
+        6,
+        2,
+        7
+      ]
+    },
+    "order": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "chemicalJson": 1,
+  "layer": {
+    "enable": {
+      "Ball and Stick": [
+        false
+      ],
+      "Cartoons": [
+        false
+      ],
+      "Labels": [
+        false
+      ],
+      "Licorice": [
+        true
+      ],
+      "Van der Waals": [
+        false
+      ],
+      "Van der Waals (AO)": [
+        false
+      ],
+      "Wireframe": [
+        false
+      ]
+    },
+    "locked": [
+      false
+    ],
+    "settings": {
+      "Ball and Stick": [
+        "true true 0.300000 0.100000"
+      ]
+    },
+    "visible": [
+      true
+    ]
+  }
+}
