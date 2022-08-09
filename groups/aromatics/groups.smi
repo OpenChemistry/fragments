@@ -1,0 +1,16 @@
+c1ccccc1 phenyl
+c1ccccc1-c1ccccc1 biphenyl
+c1cccc2cccc2c1 azulene
+c1c2ccccc2ccc1 naphthalene
+c1ccc2c3ccccc3Cc2c1 fluorene
+c1ccc2cc3ccccc3cc2c1 anthracene
+c1ccc2c(c1)CC=C2 indene
+C1=CC=C2C(=C1)C=CC3=CC=CC=C32 phenanthrene
+c3c1cccc2\C=C/Cc(c12)cc3 phenalene
+c1ccc2c(c1)ccc3c2ccc4c3cccc4 chrysene
+c1cc2cccc3ccc4cccc1c4c32 pyrene
+c1c2cc3cc4ccccc4cc3cc2ccc1 tetracene
+c1ccc2cc3cc4cc5ccccc5cc4cc3cc2c1 pentacene
+c1ccc5cccc4c5c1c2cccc3cccc4c23 perylene
+c1cc2ccc3ccc4ccc5ccc6ccc1c7c2c3c4c5c67 coronene
+C1=CC2=CC=C3C=CC4=C5C6=C(C2=C35)C1=CC=C6C=C4 corranulene

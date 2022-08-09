@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256' height='256' x='0' y='0'> </rect>
+<path class='bond-0' d='M 228.541,244.364 L 203.422,229.792' style='fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0' d='M 203.422,229.792 L 178.304,215.221' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 161.552,186.108 L 161.61,157.05' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 161.61,157.05 L 161.669,127.992' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 175.518,177.419 L 175.558,157.078' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 175.558,157.078 L 175.599,136.738' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 161.669,127.992 L 136.55,113.427' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 136.55,113.427 L 111.432,98.8609' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 94.6802,69.7523 L 94.7383,40.6943' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 94.7383,40.6943 L 94.7964,11.6364' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4' d='M 77.8508,98.7726 L 52.6551,113.251' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4' d='M 52.6551,113.251 L 27.4594,127.729' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M247.982,210.851 C243.821,210.303 243.011,211.699 245.552,215.04 C248.093,218.38 247.283,219.777 243.122,219.229 C238.96,218.681 238.15,220.077 240.692,223.418 C243.233,226.758 242.423,228.155 238.261,227.607 C234.1,227.059 233.29,228.456 235.831,231.796 C238.372,235.137 237.562,236.533 233.401,235.985 C229.24,235.438 228.43,236.834 230.971,240.175 C233.512,243.515 232.702,244.911 228.541,244.364 C224.379,243.816 223.569,245.212 226.11,248.553 C228.652,251.893 227.842,253.29 223.68,252.742 C219.519,252.194 218.709,253.591 221.25,256.931 C223.791,260.272 222.981,261.668 218.82,261.12 C214.659,260.572 213.848,261.969 216.39,265.309 C218.931,268.65 218.121,270.046 213.96,269.498 C209.798,268.951 208.988,270.347 211.529,273.688 C214.071,277.028 213.261,278.424 209.099,277.877' style='fill:none;stroke:#7F7F7F;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text dominant-baseline="central" text-anchor="end" x='174.43' y='211.292' style='font-size:38px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#0000FF' ><tspan>N</tspan></text>
+<text dominant-baseline="central" text-anchor="middle" x='94.6414' y='94.9359' style='font-size:38px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#0000FF' ><tspan>N</tspan></text>
+</svg>

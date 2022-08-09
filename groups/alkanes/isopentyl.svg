@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256' height='256' x='0' y='0'> </rect>
+<path class='bond-0' d='M 11.6364,178.456 L 40.7138,161.639' style='fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0' d='M 40.7138,161.639 L 69.7913,144.823' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 69.7913,144.823 L 128,178.362' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 128,178.362 L 186.155,144.729' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 186.155,144.729 L 244.364,178.267' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4' d='M 186.155,144.729 L 186.101,77.5444' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M28.4538,207.535 C30.661,204.642 29.9603,203.43 26.3516,203.9 C22.743,204.37 22.0422,203.159 24.2494,200.265 C26.4567,197.372 25.7559,196.16 22.1473,196.63 C18.5386,197.1 17.8379,195.889 20.0451,192.995 C22.2523,190.102 21.5516,188.89 17.9429,189.36 C14.3342,189.83 13.6335,188.619 15.8407,185.725 C18.0479,182.832 17.3472,181.62 13.7385,182.091 C10.1299,182.561 9.42914,181.349 11.6364,178.456 C13.8436,175.562 13.1429,174.351 9.53418,174.821 C5.92551,175.291 5.22478,174.079 7.432,171.186 C9.63922,168.292 8.9385,167.081 5.32982,167.551 C1.72115,168.021 1.02042,166.809 3.22764,163.916 C5.43486,161.022 4.73414,159.811 1.12546,160.281 C-2.48321,160.751 -3.18394,159.539 -0.976717,156.646 C1.2305,153.753 0.529775,152.541 -3.0789,153.011 C-6.68757,153.481 -7.3883,152.27 -5.18108,149.376' style='fill:none;stroke:#7F7F7F;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+</svg>

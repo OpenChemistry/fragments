@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256' height='256' x='0' y='0'> </rect>
+<path class='bond-0' d='M 244.364,144.87 L 223.103,157.12' style='fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0' d='M 223.103,157.12 L 201.842,169.37' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 170.468,169.336 L 149.234,157.056' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 149.234,157.056 L 128,144.776' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 134.047,144.781 L 134.067,119.587' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 134.067,119.587 L 134.087,94.3924' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 121.953,144.771 L 121.974,119.577' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 121.974,119.577 L 121.994,94.3827' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 128,144.776 L 106.739,157.031' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 106.739,157.031 L 85.4785,169.286' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4' d='M 54.1042,169.252 L 32.8703,156.967' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4' d='M 32.8703,156.967 L 11.6364,144.682' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M227.593,115.764 C225.381,118.653 226.08,119.866 229.689,119.402 C233.299,118.938 233.998,120.15 231.786,123.04 C229.574,125.93 230.273,127.143 233.882,126.678 C237.491,126.214 238.19,127.427 235.978,130.317 C233.766,133.207 234.465,134.419 238.075,133.955 C241.684,133.491 242.383,134.704 240.171,137.593 C237.959,140.483 238.658,141.696 242.267,141.232 C245.877,140.767 246.576,141.98 244.364,144.87 C242.152,147.76 242.851,148.973 246.46,148.508 C250.069,148.044 250.768,149.257 248.556,152.147 C246.344,155.037 247.043,156.249 250.653,155.785 C254.262,155.321 254.961,156.533 252.749,159.423 C250.537,162.313 251.236,163.526 254.845,163.062 C258.455,162.597 259.153,163.81 256.942,166.7 C254.73,169.59 255.428,170.803 259.038,170.338 C262.647,169.874 263.346,171.087 261.134,173.977' style='fill:none;stroke:#7F7F7F;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text dominant-baseline="central" text-anchor="middle" x='186.155' y='183.447' style='font-size:33px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>O</tspan></text>
+<text dominant-baseline="central" text-anchor="start" x='115.726' y='82.6303' style='font-size:33px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>O</tspan></text>
+<text dominant-baseline="central" text-anchor="middle" x='69.7913' y='183.367' style='font-size:33px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>O</tspan></text>
+</svg>

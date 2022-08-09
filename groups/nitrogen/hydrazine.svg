@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256' height='256' x='0' y='0'> </rect>
+<path class='bond-0' d='M 244.364,171.274 L 208.2,150.351' style='fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0' d='M 208.2,150.351 L 172.036,129.429' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 137.366,129.391 L 82.2903,161.137' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M270.3,126.444 C264.737,125.719 263.656,127.587 267.058,132.048 C270.461,136.51 269.38,138.378 263.816,137.652 C258.252,136.926 257.172,138.794 260.574,143.256 C263.976,147.717 262.896,149.585 257.332,148.859 C251.768,148.134 250.688,150.002 254.09,154.463 C257.492,158.925 256.412,160.793 250.848,160.067 C245.284,159.341 244.203,161.209 247.606,165.671 C251.008,170.132 249.927,172 244.364,171.274 C238.8,170.549 237.719,172.417 241.122,176.878 C244.524,181.34 243.443,183.208 237.879,182.482 C232.316,181.756 231.235,183.624 234.637,188.086 C238.04,192.547 236.959,194.415 231.395,193.689 C225.832,192.964 224.751,194.831 228.153,199.293 C231.555,203.755 230.475,205.623 224.911,204.897 C219.347,204.171 218.267,206.039 221.669,210.501 C225.071,214.962 223.991,216.83 218.427,216.104' style='fill:none;stroke:#7F7F7F;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text dominant-baseline="central" text-anchor="middle" x='154.701' y='125.399' style='font-size:40px;font-style:normal;font-weight:800;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#0000FF' ><tspan>N</tspan></text>
+<text dominant-baseline="central" text-anchor="start" x='141.366' y='85.3993' style='font-size:40px;font-style:normal;font-weight:800;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#0000FF' ><tspan>H</tspan></text>
+<text dominant-baseline="central" text-anchor="end" x='77.8903' y='177.729' style='font-size:40px;font-style:normal;font-weight:800;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#0000FF' ><tspan>H</tspan><tspan style='baseline-shift:sub;font-size:30px;'>2</tspan><tspan>N</tspan></text>
+</svg>

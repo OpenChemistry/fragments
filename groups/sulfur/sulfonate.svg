@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256' height='256' x='0' y='0'> </rect>
+<path class='bond-0' d='M 128,19.5237 L 128,59.2182' style='fill:none;fill-rule:evenodd;stroke:#7F7F7F;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0' d='M 128,59.2182 L 128,98.9126' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 111.986,109.968 L 79.6381,109.968' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 79.6381,109.968 L 47.2906,109.968' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 111.986,127.858 L 79.6381,127.858' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1' d='M 79.6381,127.858 L 47.2906,127.858' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 144.014,127.858 L 176.362,127.858' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 176.362,127.858 L 208.709,127.858' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 144.014,109.968 L 176.362,109.968' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2' d='M 176.362,109.968 L 208.709,109.968' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 128,138.913 L 128,168.607' style='fill:none;fill-rule:evenodd;stroke:#CCCC00;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3' d='M 128,168.607 L 128,198.301' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M78.3056,19.5237 C80.3762,24.4932 82.4468,24.4932 84.5174,19.5237 C86.588,14.5543 88.6586,14.5543 90.7292,19.5237 C92.7998,24.4932 94.8704,24.4932 96.941,19.5237 C99.0116,14.5543 101.082,14.5543 103.153,19.5237 C105.223,24.4932 107.294,24.4932 109.365,19.5237 C111.435,14.5543 113.506,14.5543 115.576,19.5237 C117.647,24.4932 119.718,24.4932 121.788,19.5237 C123.859,14.5543 125.929,14.5543 128,19.5237 C130.071,24.4932 132.141,24.4932 134.212,19.5237 C136.282,14.5543 138.353,14.5543 140.424,19.5237 C142.494,24.4932 144.565,24.4932 146.635,19.5237 C148.706,14.5543 150.777,14.5543 152.847,19.5237 C154.918,24.4932 156.988,24.4932 159.059,19.5237 C161.13,14.5543 163.2,14.5543 165.271,19.5237 C167.341,24.4932 169.412,24.4932 171.483,19.5237 C173.553,14.5543 175.624,14.5543 177.694,19.5237' style='fill:none;stroke:#7F7F7F;stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text dominant-baseline="central" text-anchor="middle" x='128' y='124.913' style='font-size:40px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#CCCC00' ><tspan>S</tspan></text>
+<text dominant-baseline="central" text-anchor="end" x='43.2906' y='124.913' style='font-size:40px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>O</tspan></text>
+<text dominant-baseline="central" text-anchor="start" x='212.709' y='124.913' style='font-size:40px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>O</tspan></text>
+<text dominant-baseline="central" text-anchor="start" x='113.321' y='224.301' style='font-size:40px;font-style:normal;font-weight:bold;fill-opacity:1;stroke:none;font-family:sans-serif;fill:#FF0000' ><tspan>OH</tspan></text>
+</svg>

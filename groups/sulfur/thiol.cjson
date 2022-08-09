@@ -1,0 +1,56 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        -2.3382,
+        1.9173,
+        1.5859,
+        -1.4225,
+        1.5,
+        2.4508,
+        -1.5402,
+        0.2394,
+        2.0553
+      ]
+    },
+    "elements": {
+      "number": [
+        0,
+        16,
+        1
+      ]
+    },
+    "formalCharges": [
+      0,
+      0,
+      0
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    "order": [
+      1,
+      1
+    ]
+  },
+  "properties": {
+    "name": "",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 2
+  }
+}
