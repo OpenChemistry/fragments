@@ -1,5 +1,4 @@
 {
-  "chemicalJson": 1,
   "atoms": {
     "coords": {
       "3d": [
@@ -20,7 +19,13 @@
         1.6255,
         3.1033,
         -0.2732,
-        -1.0398
+        -1.0398,
+        2.0657,
+        0.4765333333333333,
+        0.3223333333333333,
+        1.7476531583354156,
+        2.09349086422465,
+        -0.8109338680808065
       ]
     },
     "elements": {
@@ -30,7 +35,9 @@
         6,
         1,
         1,
-        1
+        1,
+        0,
+        0
       ]
     },
     "formalCharges": [
@@ -39,17 +46,29 @@
       0,
       0,
       0,
+      0,
+      0,
       0
-    ]
-  },
-  "partialCharges": {
-    "Gasteiger": [
-      0.12193413262309955,
-      0.12794967947888984,
-      0.21114638500850869,
-      0.3302943421635581,
-      0.11226789964485738,
-      0.09640756108108638
+    ],
+    "labels": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "layer": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ]
   },
   "bonds": {
@@ -66,7 +85,9 @@
         1,
         4,
         2,
-        5
+        5,
+        6,
+        7
       ]
     },
     "order": [
@@ -75,11 +96,63 @@
       1,
       1,
       1,
+      1,
       1
     ]
   },
+  "chemicalJson": 1,
+  "layer": {
+    "enable": {
+      "Ball and Stick": [
+        true
+      ],
+      "Cartoons": [
+        false
+      ],
+      "Close Contacts": [
+        false
+      ],
+      "Crystal Lattice": [
+        false
+      ],
+      "Force": [
+        false
+      ],
+      "Labels": [
+        false
+      ],
+      "Licorice": [
+        false
+      ],
+      "Meshes": [
+        false
+      ],
+      "Non-Covalent": [
+        false
+      ],
+      "Van der Waals": [
+        false
+      ],
+      "Van der Waals (AO)": [
+        false
+      ],
+      "Wireframe": [
+        false
+      ]
+    },
+    "locked": [
+      false
+    ],
+    "settings": {
+      "Ball and Stick": [
+        "true true 0.300000 0.100000"
+      ]
+    },
+    "visible": [
+      true
+    ]
+  },
   "properties": {
-    "name": "",
     "totalCharge": 1,
     "totalSpinMultiplicity": 1
   }

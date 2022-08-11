@@ -28,7 +28,10 @@
         0.4395,
         2.107133333333333,
         -0.3959333333333333,
-        0.0745
+        0.0745,
+        2.3458843202418356,
+        -0.5438133410960464,
+        -1.9056842009152366
       ]
     },
     "elements": {
@@ -41,10 +44,24 @@
         1,
         1,
         1,
+        0,
         0
       ]
     },
+    "formalCharges": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
     "labels": [
+      "",
       "",
       "",
       "",
@@ -64,18 +81,8 @@
       0,
       0,
       0,
+      0,
       0
-    ],
-    "selected": [
-      true,
-      true,
-      true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      true
     ]
   },
   "bonds": {
@@ -94,11 +101,14 @@
         2,
         6,
         2,
-        7
+        7,
+        8,
+        9
       ]
     },
     "order": [
       2,
+      1,
       1,
       1,
       1,
@@ -133,15 +143,21 @@
       ]
     },
     "locked": [
+      false,
       false
     ],
     "settings": {
       "Ball and Stick": [
-        "true true 0.300000 0.100000"
+        ""
       ]
     },
     "visible": [
+      true,
       true
     ]
+  },
+  "properties": {
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 2
   }
 }
