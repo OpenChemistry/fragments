@@ -1,0 +1,56 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        0.9588,
+        -0.0142,
+        0.0885,
+        0.3622,
+        0.5875,
+        0.9278,
+        2.2732,
+        -0.0141,
+        0.0887
+      ]
+    },
+    "elements": {
+      "number": [
+        7,
+        8,
+        8
+      ]
+    },
+    "formalCharges": [
+      1,
+      0,
+      -1
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      0.39538408581865788,
+      0.11800080559996154,
+      -0.5133848914186192
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    "order": [
+      2,
+      1
+    ]
+  },
+  "properties": {
+    "name": "nitro",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 2
+  }
+}

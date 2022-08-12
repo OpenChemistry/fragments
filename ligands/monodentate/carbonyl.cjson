@@ -1,0 +1,56 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        1.0453,
+        0.0915,
+        -0.0398,
+        2.1734,
+        0.0915,
+        -0.0398,
+        -0.0131,
+        0.0915,
+        -0.0398
+      ]
+    },
+    "elements": {
+      "number": [
+        6,
+        8,
+        1
+      ]
+    },
+    "formalCharges": [
+      0,
+      0,
+      0
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    "order": [
+      3,
+      1
+    ]
+  },
+  "properties": {
+    "name": "carbonyl",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 2
+  }
+}

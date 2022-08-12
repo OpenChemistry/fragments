@@ -1,0 +1,56 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        0.9202,
+        -0.086,
+        -0.0538,
+        1.9095,
+        -0.0435,
+        -0.0478,
+        0.6308,
+        0.8519,
+        0.0773
+      ]
+    },
+    "elements": {
+      "number": [
+        8,
+        1,
+        1
+      ]
+    },
+    "formalCharges": [
+      0,
+      0,
+      0
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      -0.4104664877610283,
+      0.20523324388051412,
+      0.20523324388051412
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    "order": [
+      1,
+      1
+    ]
+  },
+  "properties": {
+    "name": "aqua",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 1
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        1.0523,
+        0.0998,
+        0.0056,
+        2.2095,
+        0.0998,
+        0.0056,
+        -0.0061,
+        0.0998,
+        0.0056
+      ]
+    },
+    "elements": {
+      "number": [
+        6,
+        7,
+        1
+      ]
+    },
+    "formalCharges": [
+      0,
+      0,
+      0
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      0.04638167402546471,
+      -0.20010423700081915,
+      0.15372256297535445
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1,
+        0,
+        2
+      ]
+    },
+    "order": [
+      3,
+      1
+    ]
+  },
+  "properties": {
+    "name": "cyano",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 1
+  }
+}

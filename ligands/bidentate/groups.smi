@@ -1,0 +1,5 @@
+[CH3][N]1([CH3])CC[N]([CH3])([CH3])[*]1 tmeda-tetramethylethylenediamine
+[NH2]1CC[NH2][*]1 en-ethylenediamine
+C12=CC=CC=[N]1[*][N]3=C2C=CC=C3 bpy-bipyridine
+C12=C3C=CC=[N]1[*][N]4=C2C(C=C3)=CC=C4 phenanthroline
+[CH3]C([O][*]1)=CC(=[O]1)[CH3] acac-acetylacetonate

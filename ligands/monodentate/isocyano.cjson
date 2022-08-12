@@ -1,0 +1,47 @@
+{
+  "chemicalJson": 1,
+  "atoms": {
+    "coords": {
+      "3d": [
+        0.9511,
+        0.021,
+        0.0717,
+        2.2315,
+        0.021,
+        0.0717
+      ]
+    },
+    "elements": {
+      "number": [
+        7,
+        6
+      ]
+    },
+    "formalCharges": [
+      0,
+      0
+    ]
+  },
+  "partialCharges": {
+    "Gasteiger": [
+      -0.1445992097939671,
+      0.1445992097939671
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        0,
+        1
+      ]
+    },
+    "order": [
+      2
+    ]
+  },
+  "properties": {
+    "name": "isocyano",
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 2
+  }
+}
