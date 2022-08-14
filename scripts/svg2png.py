@@ -12,5 +12,5 @@ for argument in sys.argv[1:]:
     name = argument.split(".")[0]
 
     # save a PNG
-    cairosvg.svg2png( bytestring=svg, write_to=name+".png" )
+    cairosvg.svg2png( bytestring=svg, scale=3.0, write_to=name+".png" )
 
