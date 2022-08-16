@@ -79,7 +79,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
@@ -125,6 +125,24 @@
       0,
       0,
       0
+    ],
+    "selected": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
     ]
   },
   "bonds": {
@@ -207,6 +225,7 @@
     },
     "locked": [
       false,
+      false,
       false
     ],
     "settings": {
@@ -215,6 +234,7 @@
       ]
     },
     "visible": [
+      true,
       true,
       true
     ]
