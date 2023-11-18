@@ -1,0 +1,159 @@
+{
+  "atoms": {
+    "coords": {
+      "3d": [
+        -0.92184225486696,
+        -1.35410211563025,
+        -0.94410723724181,
+        -1.40828677665917,
+        0.8011248163362,
+        -0.36009114298721,
+        0.03392587117041,
+        1.32530715187344,
+        0.33945079612283,
+        1.14194396792958,
+        0.52291216344061,
+        0.45480623480104,
+        1.18068618203567,
+        -1.07144410996364,
+        -0.0925240685673,
+        0.04670443582721,
+        2.3453504660161,
+        0.69986710667162,
+        2.04996490111565,
+        0.89274338471581,
+        0.9104523569958
+      ]
+    },
+    "elements": {
+      "number": [
+        0,
+        16,
+        6,
+        6,
+        16,
+        1,
+        1
+      ]
+    },
+    "formalCharges": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "labels": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "layer": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        3,
+        6,
+        3,
+        4,
+        0,
+        1,
+        0,
+        4,
+        1,
+        2,
+        2,
+        3,
+        2,
+        5
+      ]
+    },
+    "order": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ]
+  },
+  "chemicalJson": 1,
+  "layer": {
+    "enable": {
+      "Ball and Stick": [
+        true
+      ],
+      "Cartoons": [
+        true
+      ],
+      "Close Contacts": [
+        false
+      ],
+      "Crystal Lattice": [
+        false
+      ],
+      "Force": [
+        false
+      ],
+      "Labels": [
+        false
+      ],
+      "Licorice": [
+        false
+      ],
+      "Meshes": [
+        true
+      ],
+      "Non-Covalent": [
+        false
+      ],
+      "Van der Waals": [
+        false
+      ],
+      "Wireframe": [
+        true
+      ],
+      "undef": [
+        false
+      ]
+    },
+    "locked": [
+      false
+    ],
+    "settings": {
+      "Ball and Stick": [
+        "true true 0.300000 0.100000"
+      ],
+      "Cartoons": [
+        "false false false false false true false"
+      ],
+      "Wireframe": [
+        "true true 1.200000"
+      ]
+    },
+    "visible": [
+      true
+    ]
+  },
+  "name": "energy: -25.490179011272 gnorm: 0.000598364307 xtb: 6.5.1 (conda-forge)",
+  "properties": {
+    "totalCharge": 0,
+    "totalSpinMultiplicity": 1
+  }
+}
