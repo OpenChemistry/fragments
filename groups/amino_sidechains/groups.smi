@@ -1,0 +1,21 @@
+C alanine 
+CCCNC(=[NH2+])N arginine 
+CC(=O)N asparagine 
+CC(=O)[O-] aspartic acid 
+CS cysteine 
+CCC(=O)N glutamine 
+CCC(=O)[O-] glutamic acid 
+[H] glycine 
+CC1=CN=C-N1 histidine 
+[C@]([H])(CC)C isoleucine 
+CC(C)C leucine 
+CCCC[NH3+] lysine 
+CCSC methionine 
+Cc1ccccc1 phenylalanine
+CCCCNC(=O)[C@H]1[C@H](C)CC=N1 pyrrolysine
+CO serine 
+C[SeH] selenocysteine 
+[C@]([H])(O)C threonine 
+CC(=CN2)C1=C2C=CC=C1 triptophan 
+Cc1ccc(O)cc1 tyrosine 
+C(C) valine 

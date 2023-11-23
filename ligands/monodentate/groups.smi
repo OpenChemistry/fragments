@@ -5,10 +5,10 @@
 *C([CH3])[CH3] isopropyl
 *C([CH3])([CH3])[CH3] t-butyl
 *C#[N] cyano
-*[N]=[C] isocyano
+*[N]#[C] isocyano
 *[N+](=[O])[O-] nitro
-*SC#[N] thiocyano
-*N=C=[S] thiocyanato-N
+*[SH0]C#[NH0] thiocyano
+*[N]=C=[S] thiocyanato-N
 *[N](C=C1)=CC=C1 pyridyl
 *[NH3] ammine
 *[N]([CH3])([CH3])[CH3] trimethylammonium
