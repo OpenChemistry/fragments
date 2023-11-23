@@ -1,4 +1,4 @@
-CairoSVG==2.7.1
-openbabel==3.1.1.1
-rdkit==2023.9.1
-Requests==2.31.0
+CairoSVG>=2.7.1
+openbabel-wheel>=3.1.1.16
+rdkit>=2023.3.2
+Requests>=2.31.0
