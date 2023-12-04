@@ -40,5 +40,10 @@ If RDKit depictions need revision, edit the SVG file (or create a new one from
 a program like ChemDraw or ChemDoodle). The `svg2png.py` script uses `cairosvg`
 to generate a new PNG image with the appropriate resolution.
 
-For additional instructions see 
-<https://two.avogadro.cc/docs/tools/template-tool.html#creating-new-ligands>
+To build new ligands, follow the instructions on
+<https://two.avogadro.cc/docs/tools/template-tool.html#creating-new-ligands>.
+Ascertain the JSON exported reports only properties relevant to the structure.
+If present, drop for instance the `"layer"` object about its representation as a
+ball-and-stick model.  The structure preview by `depict-ligands.py` of .smi by
+Avogadro highlights the site of complexation temporarily occupied by the dummy
+atom `*` by a dot colored in rgb(255,127,127), or #ff7f7f.
