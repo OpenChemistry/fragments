@@ -49,7 +49,7 @@ for argument in sys.argv[1:]:
             if "*" not in smiles:
                 smiles = "*" + smiles
 
-            mol = Chem.MolFromSmiles(smiles, sanitize=False)
+            mol = Chem.MolFromSmiles(smiles, sanitize=True)
             svg = svgDepict(mol).replace("*", "")
 
             # save the SVG
