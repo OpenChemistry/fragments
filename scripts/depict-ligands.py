@@ -36,8 +36,13 @@ def svgDepict(mol):
 
 
 def is_transition_metal(at):
+    """define transition metals by their atomic number
+
+    For the purpose of a motif in the template library of ligands, the
+    dummy atom `*` equally should be processed as if it were a transition
+    metal.  By convention, its atomic number is 0."""
     n = at.GetAtomicNum()
-    return (n>=22 and n<=29) or (n>=40 and n<=47) or (n>=72 and n<=79)
+    return (n>=22 and n<=29) or (n>=40 and n<=47) or (n>=72 and n<=79) or (n==0)
 
 
 def set_dative_bonds(mol, fromAtoms=(7,8)):
@@ -84,6 +89,7 @@ for argument in sys.argv[1:]:
                 smiles = "*" + smiles
 
             mol = Chem.MolFromSmiles(smiles, sanitize=False)
+            mol = set_dative_bonds(mol)
             svg = svgDepict(mol).replace("*", "")
 
             # save the SVG
