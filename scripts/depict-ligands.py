@@ -45,7 +45,7 @@ def is_transition_metal(at):
     return (n>=22 and n<=29) or (n>=40 and n<=47) or (n>=72 and n<=79) or (n==0)
 
 
-def set_dative_bonds(mol, fromAtoms=(7,8)):
+def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
     """ convert some bonds to dative
 
     Replaces some single bonds between metals and atoms with atomic numbers in fomAtoms
