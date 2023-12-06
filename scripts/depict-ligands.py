@@ -42,6 +42,11 @@ for argument in sys.argv[1:]:
     # each of these files should have a bunch of SMILES
     with open(argument) as smiles_file:
         for line in smiles_file:
+
+            # offer comment lines
+            if str(line).startswith("#"):
+                continue
+
             smiles = line.split()[0]
             name = "_".join(line.split()[1:])
             print("Running", name)
@@ -49,7 +54,7 @@ for argument in sys.argv[1:]:
             if "*" not in smiles:
                 smiles = "*" + smiles
 
-            mol = Chem.MolFromSmiles(smiles, sanitize=True)
+            mol = Chem.MolFromSmiles(smiles, sanitize=False)
             svg = svgDepict(mol).replace("*", "")
 
             # save the SVG
