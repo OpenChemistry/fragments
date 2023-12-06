@@ -77,24 +77,27 @@ for argument in sys.argv[1:]:
     with open(argument) as smiles_file:
         for line in smiles_file:
 
-            # offer comment lines
-            if str(line).startswith("#"):
-                continue
+            try:
+                # offer comment lines
+                if str(line).startswith("#"):
+                    continue
 
-            smiles = line.split()[0]
-            name = "_".join(line.split()[1:])
-            print("Running", name)
+                smiles = line.split()[0]
+                name = "_".join(line.split()[1:])
+                print("Running", name)
 
-            if "*" not in smiles:
-                smiles = "*" + smiles
+                if "*" not in smiles:
+                    smiles = "*" + smiles
 
-            mol = Chem.MolFromSmiles(smiles, sanitize=False)
-            mol = set_dative_bonds(mol)
-            svg = svgDepict(mol).replace("*", "")
+                mol = Chem.MolFromSmiles(smiles, sanitize=False)
+                mol = set_dative_bonds(mol)
+                svg = svgDepict(mol).replace("*", "")
 
-            # save the SVG
-            with open(name+'.svg', 'w') as svg_file:
-                svg_file.write(svg)
+                # save the SVG
+                with open(name+'.svg', 'w') as svg_file:
+                    svg_file.write(svg)
 
-            # save a PNG
-            cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+                # save a PNG
+                cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+            except:
+                print(f"error to process:\n{str(line).strip()}")
