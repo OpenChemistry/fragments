@@ -1,21 +1,21 @@
-*[SH] thiol
-*[CH3] methyl
-*C[CH3] ethyl
-*CC[CH3] propyl
-*C([CH3])[CH3] isopropyl
-*C([CH3])([CH3])[CH3] t-butyl
-*C#[N] cyano
-*[N]#[C] isocyano
-*[N+](=[O])[O-] nitro
-*[SH0]C#[NH0] thiocyano
-*[N]=C=[S] thiocyanato-N
-*[N](C=C1)=CC=C1 pyridyl
-*[NH3] ammine
-*[N]([CH3])([CH3])[CH3] trimethylammonium
-*[PH3] phosphine
-*[P]([CH3])([CH3])[CH3] trimethylphosphine
-*[P](C1=CC=CC=C1)(C2=CC=CC=C2)C3=CC=CC=C3 triphenylphosphine
-*C#[O] carbonyl
-*[OH2] aqua
-*[N+]#[O-] nitrosyl
-*[N]=[N+]=[N-] azido
+*[NH3] a ammine
+*[OH2] a aqua
+*[N]=[N+]=[N-] a azido
+*C#[O] a carbonyl
+*C#[N] a cyano
+*C[CH3] a ethyl
+*[N]#[C] a isocyano
+*C([CH3])[CH3] a isopropyl
+*[CH3] a methyl
+*[N+](=[O])[O-] a nitro
+*[N+]#[O-] a nitrosyl
+*[PH3] a phosphine
+*CC[CH3] a propyl
+*[N](C=C1)=CC=C1 a pyridyl
+*C([CH3])([CH3])[CH3] a t-butyl
+*[N]=C=[S] a thiocyanato-N
+*[SH0]C#[NH0] a thiocyano
+*[SH] a thiol
+*[N]([CH3])([CH3])[CH3] a trimethylammonium
+*[P]([CH3])([CH3])[CH3] a trimethylphosphine
+*[P](C1=CC=CC=C1)(C2=CC=CC=C2)C3=CC=CC=C3 a triphenylphosphine
