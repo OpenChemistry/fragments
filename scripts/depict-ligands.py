@@ -1,5 +1,9 @@
 #!/usr/bin/env python
+"""This script provides .svg and .png ligand template previews of Avogadro."""
+
 import sys
+
+import cairosvg
 
 from rdkit import Chem
 from rdkit.Chem import AllChem
@@ -7,20 +11,22 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import rdDepictor
 rdDepictor.SetPreferCoordGen(True)
 
-import cairosvg
 
 def svgDepict(mol):
-    # disable FreeType rendering to enable bold font-weight
-    # this is the version for ligands (e.g., show a red metal circle)
+    """define the more general script parameters
+
+    - disable FreeType rendering to enable bold font-weight
+    - this is the version for ligands (e.g., show a red metal circle)
+    """
     d2d = rdMolDraw2D.MolDraw2DSVG(256,256,-1,-1,noFreetype=True)
     opts = d2d.drawOptions()
     opts.explicitMethyl = True
     opts.addStereoAnnotation = True
     opts.atomHighlightsAreCircles = True
 
-    mc = Chem.Mol(mol.ToBinary())
-    Chem.Kekulize(mc)
-    rdDepictor.Compute2DCoords(mc)
+    metal_complex = Chem.Mol(mol.ToBinary())
+    Chem.Kekulize(metal_complex)
+    rdDepictor.Compute2DCoords(metal_complex)
 
     # position of the "*" atom
     posStar = 0
@@ -28,27 +34,28 @@ def svgDepict(mol):
         if atom.GetAtomicNum() == 0:
             posStar = atom.GetIdx()
 
-    d2d.DrawMolecule(mc, highlightAtoms=[posStar])
+    d2d.DrawMolecule(metal_complex, highlightAtoms=[posStar])
     d2d.FinishDrawing()
     svg = d2d.GetDrawingText()
     return svg
 
 
-def is_transition_metal(at):
+def is_transition_metal(atom):
     """define transition metals by their atomic number
 
     For the purpose of a motif in the template library of ligands, the
     dummy atom `*` equally should be processed as if it were a transition
     metal.  By convention, its atomic number is 0."""
-    n = at.GetAtomicNum()
+    n = atom.GetAtomicNum()
     return (n>=22 and n<=29) or (n>=40 and n<=47) or (n>=72 and n<=79) or (n==0)
 
 
 def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
-    """ convert some bonds to dative
+    """convert some bonds to dative
 
-    Replaces some single bonds between metals and atoms with atomic numbers in fomAtoms
-    with dative bonds. The replacement is only done if the atom has "too many" bonds.
+    Replaces some single bonds between metals and atoms with atomic numbers in
+    fomAtoms with dative bonds. The replacement is only done if the atom has
+    "too many" bonds.
 
     Returns the modified molecule.
 
@@ -81,7 +88,7 @@ def generate_previews(line):
     svg = svgDepict(mol).replace("*", "")
 
     # save the SVG
-    with open(name+'.svg', 'w') as svg_file:
+    with open(name+'.svg', "w", encoding="utf8") as svg_file:
         svg_file.write(svg)
 
     # save a PNG
@@ -94,7 +101,7 @@ def generate_previews(line):
 
 for argument in sys.argv[1:]:
     # each of these files should have a bunch of SMILES
-    with open(argument) as smiles_file:
+    with open(argument, "r", encoding="utf8") as smiles_file:
         process_manually = []
         process_skipped = []
 
