@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import sys
 
 from rdkit import Chem
@@ -75,29 +74,49 @@ def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
 for argument in sys.argv[1:]:
     # each of these files should have a bunch of SMILES
     with open(argument) as smiles_file:
+        process_manually = []
+        process_skipped = []
+
         for line in smiles_file:
+            line = str(line).strip()
 
             try:
-                # offer comment lines
-                if str(line).startswith("#"):
-                    continue
+                record = str(line).split()
+                # depending on the label assigned, either
+                if record[1] == "a":
+                    smiles = line.split()[0]
+                    name = "_".join(line.split()[2:])
+                    print("Running", name)
 
-                smiles = line.split()[0]
-                name = "_".join(line.split()[1:])
-                print("Running", name)
+                    if "*" not in smiles:
+                        smiles = "*" + smiles
 
-                if "*" not in smiles:
-                    smiles = "*" + smiles
+                    mol = Chem.MolFromSmiles(smiles, sanitize=False)
+                    mol = set_dative_bonds(mol)
+                    svg = svgDepict(mol).replace("*", "")
 
-                mol = Chem.MolFromSmiles(smiles, sanitize=False)
-                mol = set_dative_bonds(mol)
-                svg = svgDepict(mol).replace("*", "")
+                    # save the SVG
+                    with open(name+'.svg', 'w') as svg_file:
+                        svg_file.write(svg)
 
-                # save the SVG
-                with open(name+'.svg', 'w') as svg_file:
-                    svg_file.write(svg)
+                    # save a PNG
+                    cairosvg.svg2png(bytestring=svg, write_to=name+".png")
 
-                # save a PNG
-                cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+                elif record[1] == "m":
+                    process_manually.append(line)
+
+                elif record[1] == "#":
+                    process_skipped.append(line)
+
+                else:
+                    process_skipped.append(line)
             except:
                 print(f"error to process:\n{str(line).strip()}")
+
+        if process_manually:
+            print("\n\nentries to be processed manually (label `m`):")
+            print(*(entry for entry in process_manually), sep="\n")
+
+        if process_skipped:
+            print("\n\nentries commented out (`#`), or with an unknown label:")
+            print(*(entry for entry in process_skipped), sep="\n")
