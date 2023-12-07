@@ -9,6 +9,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import rdDepictor
+
 rdDepictor.SetPreferCoordGen(True)
 
 
@@ -18,7 +19,7 @@ def svgDepict(mol):
     - disable FreeType rendering to enable bold font-weight
     - this is the version for ligands (e.g., show a red metal circle)
     """
-    d2d = rdMolDraw2D.MolDraw2DSVG(256,256,-1,-1,noFreetype=True)
+    d2d = rdMolDraw2D.MolDraw2DSVG(256, 256, -1, -1, noFreetype=True)
     opts = d2d.drawOptions()
     opts.explicitMethyl = True
     opts.addStereoAnnotation = True
@@ -47,10 +48,15 @@ def is_transition_metal(atom):
     dummy atom `*` equally should be processed as if it were a transition
     metal.  By convention, its atomic number is 0."""
     n = atom.GetAtomicNum()
-    return (n>=22 and n<=29) or (n>=40 and n<=47) or (n>=72 and n<=79) or (n==0)
+    return (
+        (n >= 22 and n <= 29)
+        or (n >= 40 and n <= 47)
+        or (n >= 72 and n <= 79)
+        or (n == 0)
+    )
 
 
-def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
+def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # coverage: C, N, O, P, S
     """convert some bonds to dative
 
     Replaces some single bonds between metals and atoms with atomic numbers in
@@ -66,11 +72,16 @@ def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
     metals = [at for at in rwmol.GetAtoms() if is_transition_metal(at)]
     for metal in metals:
         for nbr in metal.GetNeighbors():
-            if nbr.GetAtomicNum() in fromAtoms and \
-               nbr.GetExplicitValence()>pt.GetDefaultValence(nbr.GetAtomicNum()) and \
-               rwmol.GetBondBetweenAtoms(nbr.GetIdx(),metal.GetIdx()).GetBondType() == Chem.BondType.SINGLE:
-                rwmol.RemoveBond(nbr.GetIdx(),metal.GetIdx())
-                rwmol.AddBond(nbr.GetIdx(),metal.GetIdx(),Chem.BondType.DATIVE)
+            if (
+                nbr.GetAtomicNum() in fromAtoms
+                and nbr.GetExplicitValence() > pt.GetDefaultValence(nbr.GetAtomicNum())
+                and rwmol.GetBondBetweenAtoms(
+                    nbr.GetIdx(), metal.GetIdx()
+                ).GetBondType()
+                == Chem.BondType.SINGLE
+            ):
+                rwmol.RemoveBond(nbr.GetIdx(), metal.GetIdx())
+                rwmol.AddBond(nbr.GetIdx(), metal.GetIdx(), Chem.BondType.DATIVE)
     return rwmol
 
 
@@ -88,11 +99,11 @@ def generate_previews(line):
     svg = svgDepict(mol).replace("*", "")
 
     # save the SVG
-    with open(name+'.svg', "w", encoding="utf8") as svg_file:
+    with open(name + ".svg", "w", encoding="utf8") as svg_file:
         svg_file.write(svg)
 
     # save a PNG
-    cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+    cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
 
 
 # repeat through all the files on the command-line
