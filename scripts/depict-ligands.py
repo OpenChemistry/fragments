@@ -67,6 +67,27 @@ def set_dative_bonds(mol, fromAtoms=(6,7,8,15,16)):  # coverage: C, N, O, P, S
     return rwmol
 
 
+def generate_previews(line):
+    """provide .svg and .png previews of the currently processed structure"""
+    smiles = line.split()[0]
+    name = "_".join(line.split()[2:])
+    print("Running", name)
+
+    if "*" not in smiles:
+        smiles = "*" + smiles
+
+    mol = Chem.MolFromSmiles(smiles, sanitize=False)
+    mol = set_dative_bonds(mol)
+    svg = svgDepict(mol).replace("*", "")
+
+    # save the SVG
+    with open(name+'.svg', 'w') as svg_file:
+        svg_file.write(svg)
+
+    # save a PNG
+    cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+
+
 # repeat through all the files on the command-line
 # we can change this to use the glob module as well
 #  e.g., find all the files in a set of folders
@@ -84,23 +105,7 @@ for argument in sys.argv[1:]:
                 record = str(line).split()
                 # depending on the label assigned, either
                 if record[1] == "a":
-                    smiles = line.split()[0]
-                    name = "_".join(line.split()[2:])
-                    print("Running", name)
-
-                    if "*" not in smiles:
-                        smiles = "*" + smiles
-
-                    mol = Chem.MolFromSmiles(smiles, sanitize=False)
-                    mol = set_dative_bonds(mol)
-                    svg = svgDepict(mol).replace("*", "")
-
-                    # save the SVG
-                    with open(name+'.svg', 'w') as svg_file:
-                        svg_file.write(svg)
-
-                    # save a PNG
-                    cairosvg.svg2png(bytestring=svg, write_to=name+".png")
+                    generate_previews(line)
 
                 elif record[1] == "m":
                     process_manually.append(line)
