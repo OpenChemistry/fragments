@@ -56,12 +56,14 @@ def is_transition_metal(atom):
     )
 
 
-def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # coverage: C, N, O, P, S
+def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
     """convert some bonds to dative
 
-    Replaces some single bonds between metals and atoms with atomic numbers in
-    fomAtoms with dative bonds. The replacement is only done if the atom has
-    "too many" bonds.
+    Replace any single bond between the dummy atom/transition metals and atoms
+    with atomic numbers in fromAtoms with dative bonds.  This approach differs
+    to the original approach[1] to highlight the denticity of every ligand.
+
+    [1] http://rdkit.org/docs/Cookbook.html#organometallics-with-dative-bonds
 
     Returns the modified molecule.
 
@@ -74,7 +76,6 @@ def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # coverage: C, N, O, P,
         for nbr in metal.GetNeighbors():
             if (
                 nbr.GetAtomicNum() in fromAtoms
-                and nbr.GetExplicitValence() > pt.GetDefaultValence(nbr.GetAtomicNum())
                 and rwmol.GetBondBetweenAtoms(
                     nbr.GetIdx(), metal.GetIdx()
                 ).GetBondType()
