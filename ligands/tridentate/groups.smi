@@ -1,6 +1,6 @@
 *23[S]1CC[S]2CC[S]3CC1 a 9-ane-S3
 *12[NH2]CC[NH]1CC[NH2]2 a dien-diethylenetriamine
-*234.C1C[NH]2CC[NH]3CC[NH]14 a tacn-1,4,7-triazacyclononane
+*234.C1C[NH]2CC[NH]3CC[NH]14 a tacn-147-triazacyclononane
 C12=CC=CC=[N]1*1[N]3=C2C=CC=C3C2=CC=CC=[N]12 a terpyridine
 [*]456.[H][B-]([NH0]1[NH0]4=CC=C1)([NH0]2[NH0]5=CC=C2)[NH0]3[NH0]6=CC=C3 a tp-scorpionate
 *678.C1=CC=C(C=C1)[PH0]6(CC[PH0]7(C2=CC=CC=C2)C3=CC=CC=C3)CC[PH0]8(C4=CC=CC=C4)C5=CC=CC=C5 m triphos
