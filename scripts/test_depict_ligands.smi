@@ -1,0 +1,4 @@
+C1=CC2=CC3[N]4C(=CC=3)C=C3[N]5=C(C=C6[N]7C(=CC1=[N]2[*]457)C=C6)C=C3 a porphin
+*234[OH0]1CC[OH0]2CC[OH0]3CC[OH0]4CC1 m 12-crown-4
+some_SMILES_string # the_corresponding_name
+some other
