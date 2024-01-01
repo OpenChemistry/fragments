@@ -14,3 +14,5 @@ c1ccc2cc3cc4cc5ccccc5cc4cc3cc2c1 pentacene
 c1ccc5cccc4c5c1c2cccc3cccc4c23 perylene
 c1cc2ccc3ccc4ccc5ccc6ccc1c7c2c3c4c5c67 coronene
 C1=CC2=CC=C3C=CC4=C5C6=C(C2=C35)C1=CC=C6C=C4 corranulene
+C(C1=CC=CC=C1)(C2=CC=CC=C2)(C3=CC=CC=C3) trityl
+c1c(C)cc(C)cc(C)1 mesityl
