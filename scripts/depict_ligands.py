@@ -56,14 +56,19 @@ def is_transition_metal(atom):
     )
 
 
-def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
+def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
     """convert some bonds to dative
 
     Replace any single bond between the dummy atom/transition metals and atoms
     with atomic numbers in fromAtoms with dative bonds.  This approach differs
     to the original approach[1] to highlight the denticity of every ligand.
+    Because of a discussion in the user forum of RDKit,[2] the use of a dative
+    bond indicated by an arrow however is dropped; because results are depicted
+    and are not starting point of additional computation, single bonds appear
+    a suitable alternative to use.
 
     [1] http://rdkit.org/docs/Cookbook.html#organometallics-with-dative-bonds
+    [2] https://github.com/rdkit/rdkit/discussions/6995
 
     Returns the modified molecule.
 
@@ -82,7 +87,7 @@ def set_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
                 == Chem.BondType.SINGLE
             ):
                 rwmol.RemoveBond(nbr.GetIdx(), metal.GetIdx())
-                rwmol.AddBond(nbr.GetIdx(), metal.GetIdx(), Chem.BondType.DATIVE)
+                rwmol.AddBond(nbr.GetIdx(), metal.GetIdx(), Chem.BondType.SINGLE)
     return rwmol
 
 
@@ -96,7 +101,7 @@ def generate_previews(line):
         smiles = "*" + smiles
 
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
-    mol = set_dative_bonds(mol)
+    mol = reset_dative_bonds(mol)
     svg = svgDepict(mol).replace("*", "")
 
     # save the SVG

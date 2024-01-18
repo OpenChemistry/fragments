@@ -1,6 +1,8 @@
 [CH3]C([O][*]1)=CC(=[O]1)[CH3] a acac-acetylacetonate
 C12=CC=CC=[N]1[*][N]3=C2C=CC=C3 a bpy-bipyridine
 [*]1[SH0][CH][CH][SH0]1 a dithiolene
+C[P]1(C)CC[P](C)(C)*1 a dmpe-1,2-bis(dimethylphosphino)ethane
+c1([P]2(c3ccccc3)CC[P](c3ccccc3)(c3ccccc3)*2)ccccc1 a dppe-1,2-bis(diphenylphosphino)ethane
 [NH2]1CC[NH2][*]1 a en-ethylenediamine
 [CH3][N]1([CH3])CC[N]([CH3])([CH3])[*]1 a tmeda-tetramethylethylenediamine
 [O]=C([O-][*][O-]1)C1=[O] a oxalate

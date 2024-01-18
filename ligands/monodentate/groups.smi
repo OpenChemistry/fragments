@@ -4,7 +4,6 @@
 *C#[O] a carbonyl
 *C#[N] a cyano
 *C[CH3] a ethyl
-Cc1cc(C)cc(c1N1CCN(C1*)c1c(C)cc(cc1C)C)C a imes
 *[N]#[C] a isocyano
 *C([CH3])[CH3] a isopropyl
 *[CH3] a methyl
@@ -13,6 +12,7 @@ Cc1cc(C)cc(c1N1CCN(C1*)c1c(C)cc(cc1C)C)C a imes
 *[PH3] a phosphine
 *CC[CH3] a propyl
 *[N](C=C1)=CC=C1 a pyridyl
+Cc1cc(C)cc(c1N1CCN(C1=*)c1c(C)cc(cc1C)C)C a simes
 *C([CH3])([CH3])[CH3] a t-butyl
 *[N]=C=[S] a thiocyanato-N
 *[SH0]C#[NH0] a thiocyano
