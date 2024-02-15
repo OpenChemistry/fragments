@@ -2,6 +2,7 @@
 *[OH2] a aqua
 *[N]=[N+]=[N-] a azido
 *C#[O] a carbonyl
+[Cl-]* a chlorido
 *C#[N] a cyano
 *C[CH3] a ethyl
 [F-]* a fluorido
