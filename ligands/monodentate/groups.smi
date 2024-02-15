@@ -17,6 +17,7 @@
 *CC[CH3] a propyl
 *[N](C=C1)=CC=C1 a pyridyl
 Cc1cc(C)cc(c1N1CCN(C1=*)c1c(C)cc(cc1C)C)C a simes
+*[O]1CCCC1 a tetrahydrofurane
 *C([CH3])([CH3])[CH3] a t-butyl
 *[N]=C=[S] a thiocyanato-N
 *[SH0]C#[NH0] a thiocyano
