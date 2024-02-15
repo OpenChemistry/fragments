@@ -5,6 +5,7 @@
 *C#[O] a carbonyl
 [Cl-]* a chlorido
 *C#[N] a cyano
+CC[O](*)CC a diethylether
 *C[CH3] a ethyl
 [F-]* a fluorido
 [I-]* a iodido
