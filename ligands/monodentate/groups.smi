@@ -1,6 +1,7 @@
 *[NH3] a ammine
 *[OH2] a aqua
 *[N]=[N+]=[N-] a azido
+[Br-]* a bromido
 *C#[O] a carbonyl
 [Cl-]* a chlorido
 *C#[N] a cyano
