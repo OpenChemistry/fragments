@@ -99,9 +99,6 @@ def generate_previews(line):
     name = "_".join(line.split()[2:])
     print("Running", name)
 
-    if "*" not in smiles:
-        smiles = "*" + smiles
-
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
     mol = reset_dative_bonds(mol)
     svg = svgDepict(mol).replace("*", "")
