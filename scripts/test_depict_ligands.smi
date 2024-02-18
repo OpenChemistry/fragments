@@ -7,4 +7,5 @@ C1=CC=C(C=C1)[C@@H](C(=O)O)O a (S)-mandelic_acid
 [C@@H]([C@H](C(=O)O)O)(C(=O)O)O a (R,R)-tataric_acid
 C[C@H]1N=C(CC2=N[C@H](C)CO2)OC1 a empty_RR_boxligand
 C[C@H]1N([Zn]N2=C(C3)OC[C@H]2C)=C3OC1 a (R,R)-Zn_box_complex
+C[C@H]1N([*]N2=C(C3)OC[C@H]2C)=C3OC1 a (R,R)-x_box_complex
 
