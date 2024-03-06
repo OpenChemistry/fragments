@@ -1,9 +1,15 @@
 *[NH3] a ammine
 *[OH2] a aqua
 *[N]=[N+]=[N-] a azido
+[Br-]* a bromido
 *C#[O] a carbonyl
+[Cl-]* a chlorido
 *C#[N] a cyano
+CC[O](*)CC a diethylether
+C[S](C)* a dimethylsulfide
 *C[CH3] a ethyl
+[F-]* a fluorido
+[I-]* a iodido
 *[N]#[C] a isocyano
 *C([CH3])[CH3] a isopropyl
 *[CH3] a methyl
@@ -13,6 +19,7 @@
 *CC[CH3] a propyl
 *[N](C=C1)=CC=C1 a pyridyl
 Cc1cc(C)cc(c1N1CCN(C1=*)c1c(C)cc(cc1C)C)C a simes
+*[O]1CCCC1 a tetrahydrofurane
 *C([CH3])([CH3])[CH3] a t-butyl
 *[N]=C=[S] a thiocyanato-N
 *[SH0]C#[NH0] a thiocyano

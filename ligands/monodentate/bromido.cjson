@@ -1,0 +1,41 @@
+{
+  "atoms": {
+    "coords": {
+      "3d": [
+        5.721327,
+        0.041091,
+        -0.070695,
+        3.362434,
+        0.041091,
+        -0.070695
+      ]
+    },
+    "elements": {
+      "number": [
+        35,
+        0
+      ]
+    },
+    "formalCharges": [
+      -1,
+      0
+    ]
+  },
+  "bonds": {
+    "connections": {
+      "index": [
+        1,
+        0
+      ]
+    },
+    "order": [
+      1
+    ]
+  },
+  "chemicalJson": 1,
+  "properties": {
+    "fileName": "bromido",
+    "totalCharge": -1,
+    "totalSpinMultiplicity": 1
+  }
+}
