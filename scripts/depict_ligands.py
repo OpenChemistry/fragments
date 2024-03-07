@@ -9,6 +9,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import rdDepictor
+from rdkit.Chem import rdCIPLabeler
 
 rdDepictor.SetPreferCoordGen(True)
 
@@ -28,6 +29,7 @@ def svgDepict(mol):
     metal_complex = Chem.Mol(mol.ToBinary())
     Chem.Kekulize(metal_complex)
     rdDepictor.Compute2DCoords(metal_complex)
+    rdCIPLabeler.AssignCIPLabels(metal_complex)
 
     # position of the "*" atom
     posStar = 0
@@ -96,9 +98,6 @@ def generate_previews(line):
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
     print("Running", name)
-
-    if "*" not in smiles:
-        smiles = "*" + smiles
 
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
     mol = reset_dative_bonds(mol)

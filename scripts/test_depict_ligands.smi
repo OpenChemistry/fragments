@@ -2,3 +2,10 @@ C1=CC2=CC3[N]4C(=CC=3)C=C3[N]5=C(C=C6[N]7C(=CC1=[N]2[*]457)C=C6)C=C3 a porphin
 *234[OH0]1CC[OH0]2CC[OH0]3CC[OH0]4CC1 m 12-crown-4
 some_SMILES_string # the_corresponding_name
 some other
+C1C[C@H](NC1)C(=O)O a (S)-prolin
+C1=CC=C(C=C1)[C@@H](C(=O)O)O a (S)-mandelic_acid
+[C@@H]([C@H](C(=O)O)O)(C(=O)O)O a (R,R)-tataric_acid
+C[C@H]1N=C(CC2=N[C@H](C)CO2)OC1 a empty_RR_boxligand
+C[C@H]1N([Zn]N2=C(C3)OC[C@H]2C)=C3OC1 a (R,R)-Zn_box_complex
+C[C@H]1N([*]N2=C(C3)OC[C@H]2C)=C3OC1 a (R,R)-x_box_complex
+
