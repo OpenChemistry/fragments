@@ -1,40 +1,21 @@
 {
+  "chemicalJson": 1,
   "atoms": {
     "coords": {
-      "3d": [
-        4.546378,
-        -0.004551,
-        -0.091389,
-        2.74966,
-        -0.004551,
-        -0.091389
-      ]
+      "3d": [4.54638, -0.00455, -0.09139, 2.74966, -0.00455, -0.09139]
     },
     "elements": {
-      "number": [
-        9,
-        0
-      ]
+      "number": [9, 0]
     },
-    "formalCharges": [
-      -1,
-      0
-    ]
+    "formalCharges": [-1, 0]
   },
   "bonds": {
     "connections": {
-      "index": [
-        1,
-        0
-      ]
+      "index": [1, 0]
     },
-    "order": [
-      1
-    ]
+    "order": [1]
   },
-  "chemicalJson": 1,
   "properties": {
-    "name": "fluorido",
     "totalCharge": -1,
     "totalSpinMultiplicity": 1
   }

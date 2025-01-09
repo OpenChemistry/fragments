@@ -1,40 +1,21 @@
 {
+  "chemicalJson": 1,
   "atoms": {
     "coords": {
-      "3d": [
-        5.485189,
-        0.088312,
-        0.013203,
-        3.285018,
-        0.088312,
-        0.013203
-      ]
+      "3d": [5.48519, 0.08831, 0.0132, 3.28502, 0.08831, 0.0132]
     },
     "elements": {
-      "number": [
-        17,
-        0
-      ]
+      "number": [17, 0]
     },
-    "formalCharges": [
-      -1,
-      0
-    ]
+    "formalCharges": [-1, 0]
   },
   "bonds": {
     "connections": {
-      "index": [
-        1,
-        0
-      ]
+      "index": [1, 0]
     },
-    "order": [
-      1
-    ]
+    "order": [1]
   },
-  "chemicalJson": 1,
   "properties": {
-    "name": "chlorido",
     "totalCharge": -1,
     "totalSpinMultiplicity": 1
   }
