@@ -39,7 +39,7 @@ def flatten_dumps(data: dict) -> str:
     return output
 
 
-def shrink(cjson: dict) -> dict:
+def minimal(cjson: dict) -> dict:
     """Reduce a CJSON to core geometry data."""
     minimal_cjson = {
         "chemicalJson": cjson.get("chemicalJson", 1),
@@ -77,11 +77,12 @@ def round_coords(cjson: dict, places: int) -> dict:
     coords = cjson["atoms"]["coords"]["3d"]
     rounded = [round(c, places) for c in coords]
     cjson["atoms"]["coords"]["3d"] = rounded
+    return cjson
 
 
 def flatten_all(
         cjson_list: list[Path],
-        shrink: bool,
+        minimize: bool,
         round_coords_places: int | None = None,
         validate: bool = False,
     ):
@@ -91,11 +92,15 @@ def flatten_all(
     for file in cjson_list:
         with open(file) as f:
             cjson = json.load(f)
-        if shrink:
-            cjson = shrink(cjson)
-        if round_coords:
+        print(cjson)
+        if minimize:
+            cjson = minimal(cjson)
+        print(cjson)
+        if round_coords_places:
             cjson = round_coords(cjson, round_coords_places)
+        print(cjson)
         flattened = flatten_dumps(cjson)
+        print(cjson)
         #print(flattened)
         with open(file, "w") as f:
             f.write(flattened)
@@ -113,12 +118,13 @@ def flatten_all(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("directory", type=Path)
-    parser.add_argument("-s", "--shrink", action="store_true")
-    parser.add_argument("-r", "--round_coords", nargs="?", type=int, const=None, default=5)
+    parser.add_argument("-m", "--minimize", action="store_true")
+    parser.add_argument("-r", "--round_coords", nargs="?", type=int, const=5, default=None)
     args = parser.parse_args()
+    print(args)
 
     # Get all CJSON files in dir
     file_list = recursive_search(args.directory)
     cjson_list = [f for f in file_list if f.suffix == ".cjson"]
 
-    flatten_all(cjson_list, args.shrink, args.round_coords)
+    flatten_all(cjson_list, args.minimize, args.round_coords)
