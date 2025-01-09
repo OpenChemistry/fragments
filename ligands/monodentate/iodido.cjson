@@ -1,40 +1,21 @@
 {
+  "chemicalJson": 1,
   "atoms": {
     "coords": {
-      "3d": [
-        6.210514,
-        0.090968,
-        0.015107,
-        3.648687,
-        0.090968,
-        0.015107
-      ]
+      "3d": [6.21051, 0.09097, 0.01511, 3.64869, 0.09097, 0.01511]
     },
     "elements": {
-      "number": [
-        53,
-        0
-      ]
+      "number": [53, 0]
     },
-    "formalCharges": [
-      -1,
-      0
-    ]
+    "formalCharges": [-1, 0]
   },
   "bonds": {
     "connections": {
-      "index": [
-        1,
-        0
-      ]
+      "index": [1, 0]
     },
-    "order": [
-      1
-    ]
+    "order": [1]
   },
-  "chemicalJson": 1,
   "properties": {
-    "fileName": "iodido",
     "totalCharge": -1,
     "totalSpinMultiplicity": 1
   }
