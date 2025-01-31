@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """This script provides .svg and .png ligand template previews of Avogadro."""
 
+import argparse
 import sys
 
 import cairosvg
@@ -12,6 +13,25 @@ from rdkit.Chem import rdDepictor
 from rdkit.Chem import rdCIPLabeler
 
 rdDepictor.SetPreferCoordGen(True)
+
+
+def get_args():
+    """Get all command-line arguments"""
+
+    parser = argparse.ArgumentParser(
+        description="write .svg and .png ligand template previews for Avogadro",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    parser.add_argument(
+        "file",
+        help="one or multiple input file(s) to process",
+        metavar="FILE",
+        nargs="+",
+        type=argparse.FileType("rt"),
+    )
+
+    return parser.parse_args()
 
 
 def svgDepict(mol):
@@ -107,13 +127,11 @@ def generate_previews(line):
     cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
 
 
-# repeat through all the files on the command-line
-# we can change this to use the glob module as well
-#  e.g., find all the files in a set of folders
-
-for argument in sys.argv[1:]:
-    # each of these files should have a bunch of SMILES
-    with open(argument, "r", encoding="utf8") as smiles_file:
+def main():
+    """join the functionalities"""
+    args = get_args()
+    smiles_files = args.file
+    for smiles_file in smiles_files:
         process_manually = []
         process_skipped = []
 
@@ -144,3 +162,7 @@ for argument in sys.argv[1:]:
         if process_skipped:
             print("\n\nentries commented out (`#`), or with an unknown label:")
             print(*(entry for entry in process_skipped), sep="\n")
+
+
+if __name__ == "__main__":
+    main()
