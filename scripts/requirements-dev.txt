@@ -1,0 +1,14 @@
+# This provides an optional environment to develop and check the Python
+# scripts by git pre-commit hooks.  See file `.pre-commit-config.yaml`
+# of this project for additional details.
+
+pre-commit
+black
+flake8
+
+# After completing the setup of your virtual environment, the command
+#
+#    pre-commit install
+#
+# updates your local `.git/hooks folder`.  You equally can launch the
+# checks without a commit by `git-precommit run --all-files`.
