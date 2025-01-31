@@ -38,7 +38,7 @@ def record_chopper(files_read):
 
     A valid report is a line to contain a SMILES string, a label, and
     the (chemical) name (later used to build the file name of the .svg
-    and .png preview); each separted from each other by white space."""
+    and .png preview); each separated from each other by white space."""
     temporary_content = []
     for file_read in files_read:
         temporary_content += file_read.readlines()
@@ -83,7 +83,7 @@ def is_transition_metal(atom):
     For the purpose of a motif in the template library of ligands, the
     dummy atom indicated by `*` equally should be processed as if it
     were a transition metal.  By convention, its atomic number is 0.
-    The pattern initially seen in RDKit's coockbook was edited."""
+    The pattern initially seen in RDKit's cookbook was edited."""
     n = atom.GetAtomicNum()
     return (22 <= n <= 29) or (40 <= n <= 47) or (72 <= n <= 79) or (n == 0)
 
@@ -159,11 +159,9 @@ def main():
                 process_skipped.append(record)
         except OSError:
             print(f"error to process {record}")
-        #        except IndexError as e:
-        #            print(f"'{e}' error in file '{smiles_file.name}'")
         except Exception as e:
             print(f"non-anticipated error: {e}")
-    #
+
     if process_manually:
         print("\nentries to be processed manually (label `m`):")
         print(*(entry for entry in process_manually), sep="\n")
