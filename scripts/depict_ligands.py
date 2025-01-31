@@ -107,7 +107,7 @@ def reset_dative_bonds(mol):
 
 
 def generate_previews(line):
-    """provide .svg and .png previews of the currently processed structure"""
+    """provide per record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
     print("Running", name)
@@ -116,11 +116,9 @@ def generate_previews(line):
     mol = reset_dative_bonds(mol)
     svg = svgDepict(mol).replace("*", "")
 
-    # save the SVG
-    with open(name + ".svg", "w", encoding="utf8") as svg_file:
+    with open(name + ".svg", "w", encoding="utf-8") as svg_file:
         svg_file.write(svg)
 
-    # save a PNG
     cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
 
 
@@ -153,11 +151,11 @@ def main():
                 print(f"error to process:\n{str(line).strip()}")
 
         if process_manually:
-            print("\n\nentries to be processed manually (label `m`):")
+            print("\nentries to be processed manually (label `m`):")
             print(*(entry for entry in process_manually), sep="\n")
 
         if process_skipped:
-            print("\n\nentries commented out (`#`), or with an unknown label:")
+            print("\nentries commented out (`#`), or with an unknown label:")
             print(*(entry for entry in process_skipped), sep="\n")
 
 
