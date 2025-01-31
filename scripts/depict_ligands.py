@@ -2,7 +2,6 @@
 """This script provides .svg and .png ligand template previews of Avogadro."""
 
 import argparse
-import sys
 
 import cairosvg
 
@@ -152,7 +151,7 @@ def main():
 
                 else:
                     process_skipped.append(line)
-            except:
+            except Exception:
                 print(f"error to process:\n{str(line).strip()}")
 
         if process_manually:
