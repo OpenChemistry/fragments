@@ -33,6 +33,21 @@ def get_args():
     return parser.parse_args()
 
 
+def record_chopper(files_read):
+    """read input file(s) to return a list of records
+
+    A valid report is a line to contain a SMILES string, a label, and
+    the (chemical) name (later used to build the file name of the .svg
+    and .png preview); each separted from each other by white space."""
+    temporary_content = []
+    for file_read in files_read:
+        temporary_content += file_read.readlines()
+
+    record_list = [i.strip() for i in temporary_content if len(i.split()) >= 3]
+
+    return record_list
+
+
 def svgDepict(mol):
     """define the more general script parameters
 
@@ -125,38 +140,37 @@ def generate_previews(line):
 def main():
     """join the functionalities"""
     args = get_args()
-    smiles_files = args.file
-    for smiles_file in smiles_files:
-        process_manually = []
-        process_skipped = []
+    record_list = record_chopper(args.file)
+    process_manually = []
+    process_skipped = []
 
-        for line in smiles_file:
-            line = str(line).strip()
+    for record in record_list:
+        try:
+            split_record = record.split()
+            if split_record[1] == "a":
+                generate_previews(record)
 
-            try:
-                record = str(line).split()
-                # depending on the label assigned, either
-                if record[1] == "a":
-                    generate_previews(line)
+            elif split_record[1] == "m":
+                process_manually.append(record)
 
-                elif record[1] == "m":
-                    process_manually.append(line)
+            elif split_record[1] == "#":
+                process_skipped.append(record)
+            else:
+                process_skipped.append(record)
+        except OSError:
+            print(f"error to process {record}")
+        #        except IndexError as e:
+        #            print(f"'{e}' error in file '{smiles_file.name}'")
+        except Exception as e:
+            print(f"non-anticipated error: {e}")
+    #
+    if process_manually:
+        print("\nentries to be processed manually (label `m`):")
+        print(*(entry for entry in process_manually), sep="\n")
 
-                elif record[1] == "#":
-                    process_skipped.append(line)
-
-                else:
-                    process_skipped.append(line)
-            except Exception:
-                print(f"error to process:\n{str(line).strip()}")
-
-        if process_manually:
-            print("\nentries to be processed manually (label `m`):")
-            print(*(entry for entry in process_manually), sep="\n")
-
-        if process_skipped:
-            print("\nentries commented out (`#`), or with an unknown label:")
-            print(*(entry for entry in process_skipped), sep="\n")
+    if process_skipped:
+        print("\nentries commented out (`#`), or with an unknown label:")
+        print(*(entry for entry in process_skipped), sep="\n")
 
 
 if __name__ == "__main__":
