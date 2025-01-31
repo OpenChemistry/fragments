@@ -66,15 +66,11 @@ def is_transition_metal(atom):
     """define transition metals by their atomic number
 
     For the purpose of a motif in the template library of ligands, the
-    dummy atom `*` equally should be processed as if it were a transition
-    metal.  By convention, its atomic number is 0."""
+    dummy atom indicated by `*` equally should be processed as if it
+    were a transition metal.  By convention, its atomic number is 0.
+    The pattern initially seen in RDKit's coockbook was edited."""
     n = atom.GetAtomicNum()
-    return (
-        (n >= 22 and n <= 29)
-        or (n >= 40 and n <= 47)
-        or (n >= 72 and n <= 79)
-        or (n == 0)
-    )
+    return (22 <= n <= 29) or (40 <= n <= 47) or (72 <= n <= 79) or (n == 0)
 
 
 def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
