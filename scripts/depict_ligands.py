@@ -73,19 +73,21 @@ def is_transition_metal(atom):
     return (22 <= n <= 29) or (40 <= n <= 47) or (72 <= n <= 79) or (n == 0)
 
 
-def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
+def reset_dative_bonds(mol):
     """edit some "dative bonds"
 
-    Bonds between atoms of transition metals typical donor atoms will be marked
-    as single bonds.  Initially inspired by the RDKit Cookbook[1] depicting an
-    example with pointy arrows, a subsequent discussion in RDKit's user forum[2]
-    convinced nbehrnd to drop this approach in favor of plain bonds.
+    Bonds between atoms of transition metals and typical Lewis base /
+    donor atoms will be marked as single bonds.  Initially the function
+    by the RDKit Cookbook[1] depicting an example with pointy arrows, a
+    subsequent discussion in RDKit's user forum[2] convinced nbehrnd to
+    drop this approach in favor of plain bonds.
 
     [1] http://rdkit.org/docs/Cookbook.html#organometallics-with-dative-bonds
     [2] https://github.com/rdkit/rdkit/discussions/6995
 
     Returns the modified molecule.
     """
+    from_atoms = [6, 7, 8, 15, 16]  # i.e., C, N, O, P, S
     pt = Chem.GetPeriodicTable()
     rwmol = Chem.RWMol(mol)
     rwmol.UpdatePropertyCache(strict=False)
@@ -93,7 +95,7 @@ def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
     for metal in metals:
         for nbr in metal.GetNeighbors():
             if (
-                nbr.GetAtomicNum() in fromAtoms
+                nbr.GetAtomicNum() in from_atoms
                 and rwmol.GetBondBetweenAtoms(
                     nbr.GetIdx(), metal.GetIdx()
                 ).GetBondType()
