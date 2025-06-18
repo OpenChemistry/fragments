@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """This script provides .svg and .png ligand template previews of Avogadro."""
 
-import sys
+import argparse
 
 import cairosvg
 
@@ -12,6 +12,40 @@ from rdkit.Chem import rdDepictor
 from rdkit.Chem import rdCIPLabeler
 
 rdDepictor.SetPreferCoordGen(True)
+
+
+def get_args():
+    """Get all command-line arguments"""
+
+    parser = argparse.ArgumentParser(
+        description="write .svg and .png ligand template previews for Avogadro",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    parser.add_argument(
+        "file",
+        help="one or multiple input file(s) to process",
+        metavar="FILE",
+        nargs="+",
+        type=argparse.FileType("rt"),
+    )
+
+    return parser.parse_args()
+
+
+def record_chopper(files_read):
+    """read input file(s) to return a list of records
+
+    A valid report is a line to contain a SMILES string, a label, and
+    the (chemical) name (later used to build the file name of the .svg
+    and .png preview); each separated from each other by white space."""
+    temporary_content = []
+    for file_read in files_read:
+        temporary_content += file_read.readlines()
+
+    record_list = [i.strip() for i in temporary_content if len(i.split()) >= 3]
+
+    return record_list
 
 
 def svgDepict(mol):
@@ -47,30 +81,28 @@ def is_transition_metal(atom):
     """define transition metals by their atomic number
 
     For the purpose of a motif in the template library of ligands, the
-    dummy atom `*` equally should be processed as if it were a transition
-    metal.  By convention, its atomic number is 0."""
+    dummy atom indicated by `*` equally should be processed as if it
+    were a transition metal.  By convention, its atomic number is 0.
+    The pattern initially seen in RDKit's cookbook was edited."""
     n = atom.GetAtomicNum()
-    return (
-        (n >= 22 and n <= 29)
-        or (n >= 40 and n <= 47)
-        or (n >= 72 and n <= 79)
-        or (n == 0)
-    )
+    return (22 <= n <= 29) or (40 <= n <= 47) or (72 <= n <= 79) or (n == 0)
 
 
-def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
+def reset_dative_bonds(mol):
     """edit some "dative bonds"
 
-    Bonds between atoms of transition metals typical donor atoms will be marked
-    as single bonds.  Initially inspired by the RDKit Cookbook[1] depicting an
-    example with pointy arrows, a subsequent discussion in RDKit's user forum[2]
-    convinced nbehrnd to drop this approach in favor of plain bonds.
+    Bonds between atoms of transition metals and typical Lewis base /
+    donor atoms will be marked as single bonds.  Initially the function
+    by the RDKit Cookbook[1] depicting an example with pointy arrows, a
+    subsequent discussion in RDKit's user forum[2] convinced nbehrnd to
+    drop this approach in favor of plain bonds.
 
     [1] http://rdkit.org/docs/Cookbook.html#organometallics-with-dative-bonds
     [2] https://github.com/rdkit/rdkit/discussions/6995
 
     Returns the modified molecule.
     """
+    from_atoms = [6, 7, 8, 15, 16]  # i.e., C, N, O, P, S
     pt = Chem.GetPeriodicTable()
     rwmol = Chem.RWMol(mol)
     rwmol.UpdatePropertyCache(strict=False)
@@ -78,7 +110,7 @@ def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
     for metal in metals:
         for nbr in metal.GetNeighbors():
             if (
-                nbr.GetAtomicNum() in fromAtoms
+                nbr.GetAtomicNum() in from_atoms
                 and rwmol.GetBondBetweenAtoms(
                     nbr.GetIdx(), metal.GetIdx()
                 ).GetBondType()
@@ -90,7 +122,7 @@ def reset_dative_bonds(mol, fromAtoms=(6, 7, 8, 15, 16)):  # i.e., C, N, O, P, S
 
 
 def generate_previews(line):
-    """provide .svg and .png previews of the currently processed structure"""
+    """provide per record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
     print("Running", name)
@@ -99,48 +131,45 @@ def generate_previews(line):
     mol = reset_dative_bonds(mol)
     svg = svgDepict(mol).replace("*", "")
 
-    # save the SVG
-    with open(name + ".svg", "w", encoding="utf8") as svg_file:
+    with open(name + ".svg", "w", encoding="utf-8") as svg_file:
         svg_file.write(svg)
 
-    # save a PNG
     cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
 
 
-# repeat through all the files on the command-line
-# we can change this to use the glob module as well
-#  e.g., find all the files in a set of folders
+def main():
+    """join the functionalities"""
+    args = get_args()
+    record_list = record_chopper(args.file)
+    process_manually = []
+    process_skipped = []
 
-for argument in sys.argv[1:]:
-    # each of these files should have a bunch of SMILES
-    with open(argument, "r", encoding="utf8") as smiles_file:
-        process_manually = []
-        process_skipped = []
+    for record in record_list:
+        try:
+            split_record = record.split()
+            if split_record[1] == "a":
+                generate_previews(record)
 
-        for line in smiles_file:
-            line = str(line).strip()
+            elif split_record[1] == "m":
+                process_manually.append(record)
 
-            try:
-                record = str(line).split()
-                # depending on the label assigned, either
-                if record[1] == "a":
-                    generate_previews(line)
+            elif split_record[1] == "#":
+                process_skipped.append(record)
+            else:
+                process_skipped.append(record)
+        except OSError:
+            print(f"error to process {record}")
+        except Exception as e:
+            print(f"non-anticipated error: {e}")
 
-                elif record[1] == "m":
-                    process_manually.append(line)
+    if process_manually:
+        print("\nentries to be processed manually (label `m`):")
+        print(*(entry for entry in process_manually), sep="\n")
 
-                elif record[1] == "#":
-                    process_skipped.append(line)
+    if process_skipped:
+        print("\nentries commented out (`#`), or with an unknown label:")
+        print(*(entry for entry in process_skipped), sep="\n")
 
-                else:
-                    process_skipped.append(line)
-            except:
-                print(f"error to process:\n{str(line).strip()}")
 
-        if process_manually:
-            print("\n\nentries to be processed manually (label `m`):")
-            print(*(entry for entry in process_manually), sep="\n")
-
-        if process_skipped:
-            print("\n\nentries commented out (`#`), or with an unknown label:")
-            print(*(entry for entry in process_skipped), sep="\n")
+if __name__ == "__main__":
+    main()
