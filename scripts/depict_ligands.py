@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
 """This script provides .svg and .png ligand template previews of Avogadro."""
 
 import argparse
@@ -15,7 +16,7 @@ rdDepictor.SetPreferCoordGen(True)
 
 
 def get_args():
-    """Get all command-line arguments"""
+    """Collect command-line arguments"""
 
     parser = argparse.ArgumentParser(
         description="write .svg and .png ligand template previews for Avogadro",
@@ -34,11 +35,18 @@ def get_args():
 
 
 def record_chopper(files_read):
-    """read input file(s) to return a list of records
+    """Read input file(s) to return a list of records
 
-    A valid report is a line to contain a SMILES string, a label, and
-    the (chemical) name (later used to build the file name of the .svg
-    and .png preview); each separated from each other by white space."""
+    A valid record is a line to contain a SMILES string, a label, and
+    a name, each separated by one space.  By
+
+    - label`a`, RDKit attempts to provide a preview
+    - label `m`, a preview is to be prepared manually (e.g., ChemDraw)
+    - label `#` comments out to skip this entry
+
+    The name of a structure is appended by `.svg` and `.png` for each of the
+    preview files.  If present, spaces in the name (e.g., `chiral ligand`)
+    are converted into an underscore (`chiral_ligand.png`)."""
     temporary_content = []
     for file_read in files_read:
         temporary_content += file_read.readlines()
@@ -49,7 +57,7 @@ def record_chopper(files_read):
 
 
 def svgDepict(mol):
-    """define the more general script parameters
+    """Define the more general script parameters
 
     - disable FreeType rendering to enable bold font-weight
     - this is the version for ligands (e.g., show a red metal circle)
@@ -78,24 +86,22 @@ def svgDepict(mol):
 
 
 def is_transition_metal(atom):
-    """define transition metals by their atomic number
+    """Define transition metals by their atomic number
 
-    For the purpose of a motif in the template library of ligands, the
-    dummy atom indicated by `*` equally should be processed as if it
-    were a transition metal.  By convention, its atomic number is 0.
-    The pattern initially seen in RDKit's cookbook was edited."""
+    The example of the RDKit Cookbook[1] is extended to assign a dummy
+    atom indicated by `*` the atomic number of 0.  To prepare the previews
+    about the ligands, this equally is processed as a transition metal."""
     n = atom.GetAtomicNum()
     return (22 <= n <= 29) or (40 <= n <= 47) or (72 <= n <= 79) or (n == 0)
 
 
 def reset_dative_bonds(mol):
-    """edit some "dative bonds"
+    """Edit some "dative bonds"
 
-    Bonds between atoms of transition metals and typical Lewis base /
-    donor atoms will be marked as single bonds.  Initially the function
-    by the RDKit Cookbook[1] depicting an example with pointy arrows, a
-    subsequent discussion in RDKit's user forum[2] convinced nbehrnd to
-    drop this approach in favor of plain bonds.
+    Contrasting to the example in the RDKit Cookbook,[1] and based on a
+    discussion in the RDKit user forum[2] about this topic, the previews of
+    Avogadro2 use plain single bonds instead of 'dative bonds' (depicted by
+    pointy arrows) between ligand(s) and transition metal/dummy atom.
 
     [1] http://rdkit.org/docs/Cookbook.html#organometallics-with-dative-bonds
     [2] https://github.com/rdkit/rdkit/discussions/6995
@@ -122,7 +128,7 @@ def reset_dative_bonds(mol):
 
 
 def generate_previews(line):
-    """provide per record a .svg and .png preview"""
+    """Provide each record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
     print("Running", name)
@@ -138,7 +144,7 @@ def generate_previews(line):
 
 
 def main():
-    """join the functionalities"""
+    """Join the functionalities"""
     args = get_args()
     record_list = record_chopper(args.file)
     process_manually = []
@@ -157,10 +163,10 @@ def main():
                 process_skipped.append(record)
             else:
                 process_skipped.append(record)
-        except OSError:
-            print(f"error to process {record}")
+        except OSError as e:
+            print(f"error to process {record}, {e}")
         except Exception as e:
-            print(f"non-anticipated error: {e}")
+            print(f"unexpected error for {record}: {e}")
 
     if process_manually:
         print("\nentries to be processed manually (label `m`):")
