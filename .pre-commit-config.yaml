@@ -1,20 +1,17 @@
-# date: [2025-01-31 Fri]
+# date: [2025-06-25 Wed]
 #
-# In contrast to the checks by code reformatter Black, the setup of this
-# git-precommit hook does not prevent a Python script to enter the commit
-# history even if flake8 identifies an issue (`--exit-zero`).  To use
-# this hook, resolve the dependencies (see `requirements-dev.txt`) and
-# update `.git/hooks/` by the command `pre-commit install`.
+# To use this hook, resolve the development dependencies defined in file
+# `requirements-dev.txt`.  Then update `.git/hooks/` locally with the
+# command `pre-commit install`.
 #
 # Notes:
 #
-# - the installation creates the local folder `~/.cache/pre-commit` in
-#   addition of the virtual environment you explicitly set up
-# - while editing the Python scripts, `pre-commit run --all-files` allows
-#   to launch the tests separately and prior to e.g., `git add *.py`.
-#   Else, use `pre-commit run --files example.py` to check only one
-#   specific Python script of interest.
-# - if necessary, `git commit -m "commit message" --no-verify` allows to
+# - The installation creates the local folder `~/.cache/pre-commit` in
+#   addition to the virtual environment you explicitly set up.
+# - Run e.g., `pre-commit run --file example.py` to check `example.py`
+#   only, or `pre-commit run --all-files` to probe all scripts.  To use
+#   this hook, files to be checked need not be git staged.
+# - If necessary, `git commit -m "commit message" --no-verify` allows to
 #   bypass the tests altogether.
 
 repos:
@@ -29,6 +26,8 @@ repos:
       - id: flake8
         name: "flake8 (advisory only, it does not block a commit)"
         args:
+          - --exclude=.*/site-packages/.*
+          - --filename=.*\.py
           - --max-line-length=90
           - --show-source
           - --statistics
