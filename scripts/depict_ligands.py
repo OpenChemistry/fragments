@@ -48,6 +48,13 @@ in addition to records which require your attention, report each record to the C
         action="store_true",
     )
 
+    parser.add_argument(
+        "-p",
+        "--png",
+        help="complement the generation of previews of .svg by .png files",
+        action="store_true",
+    )
+
     return parser.parse_args()
 
 
@@ -169,7 +176,7 @@ def reset_dative_bonds(mol):
     return rwmol
 
 
-def generate_previews(line, colors, verbose):
+def generate_previews(line, colors, verbose, png):
     """Provide each record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
@@ -184,7 +191,8 @@ def generate_previews(line, colors, verbose):
     with open(name + ".svg", "w", encoding="utf-8") as svg_file:
         svg_file.write(svg)
 
-    cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
+    if png:
+        cairosvg.svg2png(bytestring=svg, write_to=name + ".png")
 
 
 def main():
@@ -200,7 +208,7 @@ def main():
         try:
             split_record = record.split()
             if split_record[1] == "a":
-                generate_previews(record, colors, args.verbose)
+                generate_previews(record, colors, args.verbose, args.png)
 
             elif split_record[1] == "m":
                 process_manually.append(record)
