@@ -40,6 +40,14 @@ def get_args():
         choices=["avalon", "bw", "cdk", "rdkit"],
     )
 
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        help="""
+in addition to records which require your attention, report each record to the CLI""",
+        action="store_true",
+    )
+
     return parser.parse_args()
 
 
@@ -161,11 +169,13 @@ def reset_dative_bonds(mol):
     return rwmol
 
 
-def generate_previews(line, colors):
+def generate_previews(line, colors, verbose):
     """Provide each record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
-    print("Running", name)
+
+    if verbose:
+        print("processing", name)
 
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
     mol = reset_dative_bonds(mol)
@@ -190,7 +200,7 @@ def main():
         try:
             split_record = record.split()
             if split_record[1] == "a":
-                generate_previews(record, colors)
+                generate_previews(record, colors, args.verbose)
 
             elif split_record[1] == "m":
                 process_manually.append(record)
