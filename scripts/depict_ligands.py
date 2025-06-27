@@ -31,6 +31,15 @@ def get_args():
         type=argparse.FileType("rt"),
     )
 
+    parser.add_argument(
+        "-a",
+        "--atom_palette",
+        help="select the atom palette used by RDKit",
+        type=str,
+        default="rdkit",
+        choices=["avalon", "bw", "cdk", "rdkit"],
+    )
+
     return parser.parse_args()
 
 
@@ -56,7 +65,28 @@ def record_chopper(files_read):
     return record_list
 
 
-def svgDepict(mol):
+def select_atom_palette(atom_palette):
+    """Adjust the atom palette to be used by RDKit
+
+    This allows to select one of the four atom palettes presented in
+    Greg Landrum's blog post by May 26, 2023, or to implicitly use
+    RDKit's default.
+
+    https://greglandrum.github.io/rdkit-blog/posts/2023-05-26-drawing-options-explained.html
+    """
+    choices = {
+        "avalon": "opts.useAvalonAtomPalette()",
+        "bw": "opts.useBWAtomPalette()",
+        "cdk": "opts.useCDKAtomPalette()",
+        "rdkit": "",  # i.e. the implicit default
+    }
+    selection = ""
+    selection = choices.get(atom_palette, None)
+
+    return selection if selection is not None else ""
+
+
+def svgDepict(mol, colors):
     """Define the more general script parameters
 
     - disable FreeType rendering to enable bold font-weight
@@ -67,6 +97,10 @@ def svgDepict(mol):
     opts.explicitMethyl = True
     opts.addStereoAnnotation = True
     opts.atomHighlightsAreCircles = True
+
+    # a safeguard if using RDKit's default atom palette
+    if colors:
+        eval(colors)
 
     metal_complex = Chem.Mol(mol.ToBinary())
     Chem.Kekulize(metal_complex)
@@ -127,7 +161,7 @@ def reset_dative_bonds(mol):
     return rwmol
 
 
-def generate_previews(line):
+def generate_previews(line, colors):
     """Provide each record a .svg and .png preview"""
     smiles = line.split()[0]
     name = "_".join(line.split()[2:])
@@ -135,7 +169,7 @@ def generate_previews(line):
 
     mol = Chem.MolFromSmiles(smiles, sanitize=False)
     mol = reset_dative_bonds(mol)
-    svg = svgDepict(mol).replace("*", "")
+    svg = svgDepict(mol, colors).replace("*", "")
 
     with open(name + ".svg", "w", encoding="utf-8") as svg_file:
         svg_file.write(svg)
@@ -147,6 +181,8 @@ def main():
     """Join the functionalities"""
     args = get_args()
     record_list = record_chopper(args.file)
+    colors = select_atom_palette(args.atom_palette)
+
     process_manually = []
     process_skipped = []
 
@@ -154,7 +190,7 @@ def main():
         try:
             split_record = record.split()
             if split_record[1] == "a":
-                generate_previews(record)
+                generate_previews(record, colors)
 
             elif split_record[1] == "m":
                 process_manually.append(record)
