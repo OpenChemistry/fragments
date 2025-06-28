@@ -11,3 +11,6 @@ C(=O)OC(=O)C anhydride
 C1OC1 epoxide
 C(=C=O)C ketene
 C#CC(=O)C ynone
+C(=O)OCC1c2ccccc2-c2ccccc21 fmoc-fluorenylmethoxycarbonyl
+C(=O)OCc1ccccc1 cbz-benzyloxycarbonyl
+C(=O)OC(C)(C)C boc-tert-butyloxycarbonyl
