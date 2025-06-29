@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+"""Script to flatten CJSON for structure templates of Avogadro2."""
+
 import argparse
 import json
 from pathlib import Path
@@ -47,7 +51,10 @@ def flatten_dumps(data: dict) -> str:
 
 
 def minimal(cjson: dict) -> dict:
-    """Reduce a CJSON to core geometry data."""
+    """Reduce a CJSON to core geometry data.
+
+    This retains the atoms with their coordinates, the bonds, and
+    the overall charge."""
     # fmt: off
     minimal_cjson = {
         "chemicalJson": cjson.get("chemicalJson", 1),
@@ -81,8 +88,7 @@ def minimal(cjson: dict) -> dict:
 
 
 def round_coords(cjson: dict, places: int) -> dict:
-    """Round off the atomic coordinates in a CJSON to the specified number of decimal
-    places."""
+    """Round off the atomic coordinates in a CJSON to a specified number of decimal places."""
     coords = cjson["atoms"]["coords"]["3d"]
     rounded = [round(c, places) for c in coords]
     cjson["atoms"]["coords"]["3d"] = rounded
