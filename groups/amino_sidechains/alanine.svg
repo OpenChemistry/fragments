@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 37.3,127.8 L 146.8,127.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='atom-1' d='M37.2928,190.608 C42.0034,190.608 42.0034,184.327 37.2928,184.327 C32.5822,184.327 32.5822,178.047 37.2928,178.047 C42.0034,178.047 42.0034,171.766 37.2928,171.766 C32.5822,171.766 32.5822,165.485 37.2928,165.485 C42.0034,165.485 42.0034,159.204 37.2928,159.204 C32.5822,159.204 32.5822,152.923 37.2928,152.923 C42.0034,152.923 42.0034,146.642 37.2928,146.642 C32.5822,146.642 32.5822,140.362 37.2928,140.362 C42.0034,140.362 42.0034,134.081 37.2928,134.081 C32.5822,134.081 32.5822,127.8 37.2928,127.8 C42.0034,127.8 42.0034,121.519 37.2928,121.519 C32.5822,121.519 32.5822,115.238 37.2928,115.238 C42.0034,115.238 42.0034,108.958 37.2928,108.958 C32.5822,108.958 32.5822,102.677 37.2928,102.677 C42.0034,102.677 42.0034,96.3959 37.2928,96.3959 C32.5822,96.3959 32.5822,90.1151 37.2928,90.1151 C42.0034,90.1151 42.0034,83.8343 37.2928,83.8343 C32.5822,83.8343 32.5822,77.5535 37.2928,77.5535 C42.0034,77.5535 42.0034,71.2726 37.2928,71.2726 C32.5822,71.2726 32.5822,64.9918 37.2928,64.9918' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='150.9' y='147.8' class='atom-1' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >C</text>
+<text x='178.5' y='147.8' class='atom-1' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='206.1' y='163.8' class='atom-1' style='font-size:26px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >3</text>
+</svg>

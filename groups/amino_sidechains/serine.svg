@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 213.5,130.9 L 135.3,85.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 135.3,85.6 L 72.1,122.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 139.2,87.9 L 135.3,85.6 L 132.2,87.5' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-1' d='M236.128,91.7835 C233.197,90.0874 230.935,93.9962 233.867,95.6923 C236.799,97.3885 234.537,101.297 231.605,99.6011 C228.674,97.905 226.412,101.814 229.344,103.51 C232.276,105.206 230.014,109.115 227.082,107.419 C224.151,105.723 221.889,109.631 224.821,111.327 C227.753,113.024 225.491,116.932 222.56,115.236 C219.628,113.54 217.366,117.449 220.298,119.145 C223.23,120.841 220.968,124.75 218.037,123.054 C215.105,121.358 212.843,125.266 215.775,126.963 C218.707,128.659 216.445,132.568 213.514,130.871 C210.582,129.175 208.321,133.084 211.252,134.78 C214.184,136.476 211.922,140.385 208.991,138.689 C206.059,136.993 203.798,140.902 206.729,142.598 C209.661,144.294 207.4,148.203 204.468,146.507 C201.536,144.81 199.275,148.719 202.206,150.415 C205.138,152.111 202.877,156.02 199.945,154.324 C197.013,152.628 194.752,156.537 197.683,158.233 C200.615,159.929 198.354,163.838 195.422,162.142 C192.49,160.446 190.229,164.354 193.161,166.05 C196.092,167.747 193.831,171.655 190.899,169.959' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='19.5' y='150.7' class='atom-2' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='45.1' y='150.7' class='atom-2' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >O</text>
+</svg>

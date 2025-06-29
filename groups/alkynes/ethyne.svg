@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 41.7,158.8 L 119.1,114.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 119.1,114.4 L 181.6,78.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 112.4,102.8 L 174.9,67.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 125.7,126.1 L 188.2,90.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 115.2,116.7 L 119.1,114.4 L 122.2,112.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-1' d='M63.8221,197.479 C66.7254,195.817 64.5092,191.946 61.6059,193.608 C58.7026,195.27 56.4863,191.398 59.3896,189.736 C62.2929,188.074 60.0767,184.203 57.1734,185.865 C54.2701,187.527 52.0538,183.656 54.9571,181.994 C57.8604,180.332 55.6442,176.46 52.7409,178.122 C49.8376,179.785 47.6213,175.913 50.5246,174.251 C53.4279,172.589 51.2117,168.718 48.3084,170.38 C45.4051,172.042 43.1888,168.171 46.0921,166.509 C48.9954,164.846 46.7792,160.975 43.8759,162.637 C40.9726,164.299 38.7563,160.428 41.6596,158.766 C44.5629,157.104 42.3467,153.233 39.4434,154.895 C36.5401,156.557 34.3238,152.685 37.2271,151.023 C40.1304,149.361 37.9142,145.49 35.0109,147.152 C32.1076,148.814 29.8913,144.943 32.7946,143.281 C35.6979,141.619 33.4817,137.747 30.5784,139.409 C27.6751,141.072 25.4588,137.2 28.3621,135.538 C31.2654,133.876 29.0492,130.005 26.1459,131.667 C23.2426,133.329 21.0263,129.458 23.9296,127.796 C26.833,126.134 24.6167,122.262 21.7134,123.924 C18.8101,125.586 16.5938,121.715 19.4971,120.053' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='184.5' y='90.1' class='atom-2' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >C</text>
+<text x='212.1' y='90.1' class='atom-2' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+</svg>

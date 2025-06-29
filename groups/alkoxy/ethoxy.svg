@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 227.0,108.7 L 185.6,132.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 158.7,132.5 L 117.4,108.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-2 atom-3' d='M 117.4,108.6 L 76.0,132.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 119.4,109.8 L 117.4,108.6 L 115.3,109.8' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-1' d='M211.195,81.2461 C209.139,82.4313 210.719,85.1729 212.775,83.9877 C214.832,82.8024 216.412,85.544 214.356,86.7292 C212.299,87.9144 213.88,90.656 215.936,89.4707 C217.992,88.2855 219.572,91.0271 217.516,92.2123 C215.46,93.3975 217.04,96.1391 219.096,94.9538 C221.152,93.7686 222.733,96.5102 220.677,97.6954 C218.62,98.8806 220.201,101.622 222.257,100.437 C224.313,99.2517 225.893,101.993 223.837,103.178 C221.781,104.364 223.361,107.105 225.417,105.92 C227.473,104.735 229.054,107.476 226.998,108.662 C224.941,109.847 226.522,112.588 228.578,111.403 C230.634,110.218 232.214,112.959 230.158,114.145 C228.102,115.33 229.682,118.071 231.738,116.886 C233.794,115.701 235.375,118.443 233.319,119.628 C231.262,120.813 232.843,123.554 234.899,122.369 C236.955,121.184 238.535,123.926 236.479,125.111 C234.423,126.296 236.003,129.038 238.059,127.852 C240.115,126.667 241.696,129.409 239.64,130.594 C237.583,131.779 239.164,134.521 241.22,133.335 C243.276,132.15 244.856,134.892 242.8,136.077' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='160.8' y='159.3' class='atom-1' style='font-size:37px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >O</text>
+<text x='12.8' y='159.2' class='atom-3' style='font-size:37px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='39.0' y='174.4' class='atom-3' style='font-size:25px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >3</text>
+<text x='51.2' y='159.2' class='atom-3' style='font-size:37px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >C</text>
+</svg>
