@@ -6,4 +6,4 @@ C1=CC2=CC3[N]4C(=CC=3)C=C3[N]5=C(C=C6[N]7C(=CC1=[N]2[*]457)C=C6)C=C3 a porphin
 [N]12=CC3=CC=CC=C3[O-][*]41[O-]C5=CC=CC=C5C=[N]4CC2 m salen
 *4567.C1(C[NH0]4(CC2=[NH0]5C=CC=C2)CC3=[NH0]6C=CC=C3)=[NH0]7C=CC=C1 m tpa-tris(2-pyridylmethyl)amine
 *123[NH2]CC[NH]1CC[NH]2CC[NH2]3 m trien-triethylenetetramine
-*123[O-]C(=O)CN1(CC(=O)[O-]2)CC(=O)[O-]3 nta-nitrilotriacetate
+*123[O-]C(=O)CN1(CC(=O)[O-]2)CC(=O)[O-]3 a nta-nitrilotriacetate
