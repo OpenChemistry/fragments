@@ -36,7 +36,7 @@ def get_args():
         "--atom_palette",
         help="select the atom palette used by RDKit",
         type=str,
-        default="rdkit",
+        default="bw",
         choices=["avalon", "bw", "cdk", "rdkit"],
     )
 
