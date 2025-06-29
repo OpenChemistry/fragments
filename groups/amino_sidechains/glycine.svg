@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 24.3,127.8 L 200.8,127.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='atom-1' d='M24.3424,225.258 C31.6517,225.258 31.6517,215.512 24.3424,215.512 C17.0331,215.512 17.0331,205.766 24.3424,205.766 C31.6517,205.766 31.6517,196.02 24.3424,196.02 C17.0331,196.02 17.0331,186.275 24.3424,186.275 C31.6517,186.275 31.6517,176.529 24.3424,176.529 C17.0331,176.529 17.0331,166.783 24.3424,166.783 C31.6517,166.783 31.6517,157.037 24.3424,157.037 C17.0331,157.037 17.0331,147.292 24.3424,147.292 C31.6517,147.292 31.6517,137.546 24.3424,137.546 C17.0331,137.546 17.0331,127.8 24.3424,127.8 C31.6517,127.8 31.6517,118.054 24.3424,118.054 C17.0331,118.054 17.0331,108.308 24.3424,108.308 C31.6517,108.308 31.6517,98.5627 24.3424,98.5627 C17.0331,98.5627 17.0331,88.8169 24.3424,88.8169 C31.6517,88.8169 31.6517,79.0712 24.3424,79.0712 C17.0331,79.0712 17.0331,69.3254 24.3424,69.3254 C31.6517,69.3254 31.6517,59.5797 24.3424,59.5797 C17.0331,59.5797 17.0331,49.8339 24.3424,49.8339 C31.6517,49.8339 31.6517,40.0881 24.3424,40.0881 C17.0331,40.0881 17.0331,30.3424 24.3424,30.3424' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='207.3' y='147.8' class='atom-1' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+</svg>

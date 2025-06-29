@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<svg version='1.1' baseProfile='full'
+              xmlns='http://www.w3.org/2000/svg'
+                      xmlns:rdkit='http://www.rdkit.org/xml'
+                      xmlns:xlink='http://www.w3.org/1999/xlink'
+                  xml:space='preserve'
+width='256px' height='256px' viewBox='0 0 256 256'>
+<!-- END OF HEADER -->
+<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
+<path class='bond-0 atom-0 atom-1' d='M 25.5,156.9 L 69.3,131.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 69.3,131.6 L 113.1,156.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-2 atom-3' d='M 113.1,156.8 L 156.9,131.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 160.7,133.6 L 160.6,97.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 153.1,133.6 L 153.0,97.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4 atom-3 atom-5' d='M 156.9,131.4 L 190.0,150.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 67.1,132.8 L 69.3,131.6 L 71.5,132.8' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path d='M 110.9,155.5 L 113.1,156.8 L 115.3,155.5' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path d='M 154.7,132.7 L 156.9,131.4 L 158.5,132.3' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-1' d='M38.1884,178.83 C39.8296,177.878 38.5602,175.69 36.919,176.642 C35.2778,177.594 34.0084,175.406 35.6496,174.454 C37.2907,173.502 36.0213,171.313 34.3801,172.266 C32.739,173.218 31.4696,171.029 33.1107,170.077 C34.7519,169.125 33.4825,166.937 31.8413,167.889 C30.2001,168.841 28.9307,166.653 30.5719,165.701 C32.2131,164.749 30.9436,162.561 29.3025,163.513 C27.6613,164.465 26.3919,162.277 28.033,161.324 C29.6742,160.372 28.4048,158.184 26.7636,159.136 C25.1225,160.088 23.853,157.9 25.4942,156.948 C27.1354,155.996 25.866,153.808 24.2248,154.76 C22.5836,155.712 21.3142,153.524 22.9554,152.572 C24.5965,151.619 23.3271,149.431 21.6859,150.383 C20.0448,151.335 18.7754,149.147 20.4165,148.195 C22.0577,147.243 20.7883,145.055 19.1471,146.007 C17.5059,146.959 16.2365,144.771 17.8777,143.819 C19.5189,142.867 18.2494,140.678 16.6083,141.63 C14.9671,142.583 13.6977,140.394 15.3388,139.442 C16.98,138.49 15.7106,136.302 14.0694,137.254 C12.4282,138.206 11.1588,136.018 12.8,135.066' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='147.7' y='96.0' class='atom-4' style='font-size:30px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >O</text>
+<text x='191.6' y='171.8' class='atom-5' style='font-size:30px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >N</text>
+<text x='212.6' y='171.8' class='atom-5' style='font-size:30px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='233.5' y='183.9' class='atom-5' style='font-size:20px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >2</text>
+</svg>
