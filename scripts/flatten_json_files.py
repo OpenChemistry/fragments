@@ -1,6 +1,41 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-3-Clause
+"""This script flattens .json files for structure templates of Avogadro."""
+
 import argparse
 import json
 from pathlib import Path
+
+
+def get_args():
+    """Collect command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="script to flatten .json files for structure templates of Avogadro",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "directory",
+        help="directory of files to process",
+        type=Path,
+    )
+
+    parser.add_argument(
+        "-m",
+        "--minimize",
+        help="reduce JSON to retain only atoms, bonds, charges, and spin",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "-r",
+        "--round_coords",
+        metavar="round_coords",
+        help="number of decimals of atomic coordinates to round to",
+        type=int,
+        default=5,
+    )
+
+    return parser.parse_args()
 
 
 def recursive_search(path: Path):
@@ -27,36 +62,32 @@ def flatten_arrays(data: dict) -> dict:
         return new
     else:
         return data
-    
+
 
 def flatten_dumps(data: dict) -> str:
     """Do the same as json.dumps() but write simple lists on a single line."""
     flattened = flatten_arrays(data)
     # Lists are now strings, remove quotes to turn them back into lists
-    output = json.dumps(flattened, indent=2).replace('"[', '[').replace(']"', ']')
+    output = json.dumps(flattened, indent=2).replace('"[', "[").replace(']"', "]")
     # Any strings within lists will have had their quotes escaped, so get rid of escapes
-    output = output.replace(r'\"', '"')
+    output = output.replace(r"\"", '"')
     return output
 
 
 def minimal(cjson: dict) -> dict:
-    """Reduce a CJSON to core geometry data."""
+    """Reduce a CJSON to core geometry data.
+
+    This retains the atoms with their coordinates, bonds, charges, and spin."""
     minimal_cjson = {
         "chemicalJson": cjson.get("chemicalJson", 1),
         "atoms": {
-            "coords": {
-                "3d": cjson["atoms"]["coords"]["3d"]
-            },
-            "elements": {
-                "number": cjson["atoms"]["elements"]["number"]
-            }
+            "coords": {"3d": cjson["atoms"]["coords"]["3d"]},
+            "elements": {"number": cjson["atoms"]["elements"]["number"]},
         },
         "bonds": {
-            "connections": {
-                "index": cjson["bonds"]["connections"]["index"]
-            },
-            "order": cjson["bonds"]["order"]
-        }
+            "connections": {"index": cjson["bonds"]["connections"]["index"]},
+            "order": cjson["bonds"]["order"],
+        },
     }
     # Formal charges are useful but may or may not be there
     if "formalCharges" in cjson["atoms"]:
@@ -67,13 +98,12 @@ def minimal(cjson: dict) -> dict:
         for prop in ["totalCharge", "totalSpinMultiplicity"]:
             if prop in cjson["properties"]:
                 minimal_cjson["properties"][prop] = cjson["properties"][prop]
-    
+
     return minimal_cjson
 
 
 def round_coords(cjson: dict, places: int) -> dict:
-    """Round off the atomic coordinates in a CJSON to the specified number of decimal
-    places."""
+    """Round atomic coordinates in a CJSON to a specified number of decimals"""
     coords = cjson["atoms"]["coords"]["3d"]
     rounded = [round(c, places) for c in coords]
     cjson["atoms"]["coords"]["3d"] = rounded
@@ -81,47 +111,43 @@ def round_coords(cjson: dict, places: int) -> dict:
 
 
 def flatten_all(
-        cjson_list: list[Path],
-        minimize: bool,
-        round_coords_places: int | None = None,
-        validate: bool = False,
-    ):
+    cjson_list: list[Path],
+    minimize: bool,
+    round_coords_places: int | None = None,
+    validate: bool = False,
+):
     checks = {}
 
     # Read then write each cjson
     for file in cjson_list:
-        with open(file) as f:
-            cjson = json.load(f)
-        print(cjson)
+        with open(file) as source:
+            cjson = json.load(source)
+
         if minimize:
             cjson = minimal(cjson)
-        print(cjson)
+
         if round_coords_places:
             cjson = round_coords(cjson, round_coords_places)
-        print(cjson)
+
         flattened = flatten_dumps(cjson)
-        print(cjson)
-        #print(flattened)
-        with open(file, "w") as f:
-            f.write(flattened)
-        if validate:
-            # Test we get the same object back as we originally read
-            check = (cjson == json.loads(flattened))
-            checks[file] = check
-            if check is False:
-                print(f"{file} was not validated")
-    
-    if validate:
-        print(checks)
+
+        with open(file, "w") as new:
+            new.write(flattened)
+
+
+#        if validate:
+#            # Test we get the same object back as we originally read
+#            check = (cjson == json.loads(flattened))
+#            checks[file] = check
+#            if check is False:
+#                print(f"{file} was not validated")
+
+#    if validate:
+#        print(checks)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("directory", type=Path)
-    parser.add_argument("-m", "--minimize", action="store_true")
-    parser.add_argument("-r", "--round_coords", nargs="?", type=int, const=5, default=None)
-    args = parser.parse_args()
-    print(args)
+    args = get_args()
 
     # Get all CJSON files in dir
     file_list = recursive_search(args.directory)
