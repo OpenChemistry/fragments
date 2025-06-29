@@ -17,6 +17,8 @@ def svgDepict(mol):
     opts.dummiesAreAttachments = True
     opts.explicitMethyl = True
     opts.addStereoAnnotation = True
+    opts.useBWAtomPalette()
+    
     d2d.DrawMolecule(mol)
     d2d.FinishDrawing()
     svg = d2d.GetDrawingText()
@@ -49,7 +51,7 @@ for argument in sys.argv[1:]:
                 svg_file.write(svg)
 
             # save a PNG
-            cairosvg.svg2png( bytestring=svg, write_to=name+".png" )
+            # cairosvg.svg2png( bytestring=svg, write_to=name+".png" )
 
             # save an SDF with coordinates
             m2 = Chem.AddHs(mol)

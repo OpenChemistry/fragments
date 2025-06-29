@@ -61,10 +61,10 @@ def minimal(cjson: dict) -> dict:
     # Formal charges are useful but may or may not be there
     if "formalCharges" in cjson["atoms"]:
         minimal_cjson["atoms"]["formalCharges"] = cjson["atoms"]["formalCharges"]
-    # Keep total charge/spin if present
+    # Keep total charge if present
     if "properties" in cjson:
         minimal_cjson["properties"] = {}
-        for prop in ["totalCharge", "totalSpinMultiplicity"]:
+        for prop in ["totalCharge"]:
             if prop in cjson["properties"]:
                 minimal_cjson["properties"][prop] = cjson["properties"][prop]
     
