@@ -1,14 +1,1 @@
-<?xml version='1.0' encoding='iso-8859-1'?>
-<svg version='1.1' baseProfile='full'
-              xmlns='http://www.w3.org/2000/svg'
-                      xmlns:rdkit='http://www.rdkit.org/xml'
-                      xmlns:xlink='http://www.w3.org/1999/xlink'
-                  xml:space='preserve'
-width='256px' height='256px' viewBox='0 0 256 256'>
-<!-- END OF HEADER -->
-<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='256.0' height='256.0' x='0.0' y='0.0'> </rect>
-<path class='bond-0 atom-0 atom-1' d='M 35.6,127.8 L 165.7,127.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
-<path class='atom-1' d='M35.6327,200.761 C41.1048,200.761 41.1048,193.465 35.6327,193.465 C30.1606,193.465 30.1606,186.169 35.6327,186.169 C41.1048,186.169 41.1048,178.873 35.6327,178.873 C30.1606,178.873 30.1606,171.577 35.6327,171.577 C41.1048,171.577 41.1048,164.281 35.6327,164.281 C30.1606,164.281 30.1606,156.985 35.6327,156.985 C41.1048,156.985 41.1048,149.688 35.6327,149.688 C30.1606,149.688 30.1606,142.392 35.6327,142.392 C41.1048,142.392 41.1048,135.096 35.6327,135.096 C30.1606,135.096 30.1606,127.8 35.6327,127.8 C41.1048,127.8 41.1048,120.504 35.6327,120.504 C30.1606,120.504 30.1606,113.208 35.6327,113.208 C41.1048,113.208 41.1048,105.912 35.6327,105.912 C30.1606,105.912 30.1606,98.6154 35.6327,98.6154 C41.1048,98.6154 41.1048,91.3193 35.6327,91.3193 C30.1606,91.3193 30.1606,84.0231 35.6327,84.0231 C41.1048,84.0231 41.1048,76.727 35.6327,76.727 C30.1606,76.727 30.1606,69.4308 35.6327,69.4308 C41.1048,69.4308 41.1048,62.1347 35.6327,62.1347 C30.1606,62.1347 30.1606,54.8385 35.6327,54.8385' style='fill:none;stroke:#7F7F7F;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
-<text x='170.5' y='147.8' class='atom-1' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >S</text>
-<text x='196.0' y='147.8' class='atom-1' style='font-size:40px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:sans-serif;text-anchor:start;fill:#000000' >H</text>
-</svg>
+<svg height="256" viewBox="0 0 256 256" width="256" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h256v256h-256z" fill="#fff"/><path d="m35.6 127.8h130.1" fill="none" stroke="#000" stroke-width="2"/><path d="m35.633 200.761c5.472 0 5.472-7.296 0-7.296s-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.297 0-7.297-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.297 0-7.297 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296 5.472-7.296 0-7.296-5.472-7.296 0-7.296" fill="none" stroke="#7f7f7f" stroke-width="2"/><g font-family="sans-serif" font-size="40"><text x="170.5" y="147.8">S</text><text x="196" y="147.8">H</text></g></svg>
