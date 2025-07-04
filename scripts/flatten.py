@@ -127,14 +127,42 @@ def flatten_all(
 #        print(checks)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("directory", type=Path)
-    parser.add_argument("-m", "--minimize", action="store_true")
-    parser.add_argument(
-        "-r", "--round_coords", nargs="?", type=int, const=5, default=None
+def get_args():
+    """Collect command-line arguments"""
+    parser = argparse.ArgumentParser(
+        description="""
+Script to flatten CJSON files of structure templates for Avogadro2""",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        "directory",
+        help="Directory of files to process",
+        type=Path,
+    )
+
+    parser.add_argument(
+        "-m",
+        "--minimize",
+        help="Reduce CJSON to retain only atoms, bonds, and charges",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "-r",
+        "--round_coords",
+        metavar="",
+        help="""
+Define explicitly the number of decimals of atomic coordinates to round
+to.  If you choose 0 (zero), the coordinates are not rounded.""",
+        type=int,
+        default=5,
+    )
+
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = get_args()
     # print(args)
 
     # Get all CJSON files in dir
