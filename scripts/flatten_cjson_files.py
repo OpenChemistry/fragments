@@ -10,6 +10,7 @@ from pathlib import Path
 # of `# fmt: off` and `# fmt: on`.  This locally disables an automated
 # reformat by Black or Ruff which otherwise would overwrite the functions'
 # intentional patterns of indentation, and use of single/double quotes.
+# By `# fmt: skip # noqa`,the corresponding line is skipped (in flatten_all).
 
 
 def recursive_search(path: Path):
@@ -102,35 +103,36 @@ def flatten_all(
     validate: bool = False,
 ):
     """Flatten a list of CJSON files according to the parameters set."""
-    # checks = {}
+    checks = {}
 
     # Read then write each cjson
     for file in cjson_list:
         with open(file, "r", encoding="utf-8") as f:
             cjson = json.load(f)
-        # print(cjson)
+            if validate:
+                print(f"\nread:\n{cjson}")
         if minimize:
             cjson = minimal(cjson)
-        # print(cjson)
+            if validate:
+                print(f"\nminimized:\n{cjson}")
         if round_coords_places:
             cjson = round_coords(cjson, round_coords_places)
-        # print(cjson)
+            if validate:
+                print(f"\nrounded:\n{cjson}")
         flattened = flatten_dumps(cjson)
-        # print(cjson)
-        # print(flattened)
+        if validate:
+            print(f"\nflattened:\n{cjson}")
+            print(f"\noutput:\n{flattened}")
         with open(file, "w", encoding="utf-8") as f:
             f.write(flattened)
-
-
-#        if validate:
-#            # Test we get the same object back as we originally read
-#            check = (cjson == json.loads(flattened))
-#            checks[file] = check
-#            if check is False:
-#                print(f"{file} was not validated")
-
-#    if validate:
-#        print(checks)
+        if validate:
+            # Test we get the same object back as we originally read
+            check = (cjson == json.loads(flattened))  # fmt: skip # noqa
+            checks[file] = check
+            if check is False:
+                print(f"{file} was not validated")
+    if validate:
+        print(checks)
 
 
 def get_args():
@@ -164,15 +166,25 @@ to.  If you choose 0 (zero), the coordinates are not rounded.""",
         default=4,
     )
 
+    parser.add_argument(
+        "-v",
+        "--validate",
+        help="""
+Check that the flattened CJSON is parsed to the same data representation
+as the original""",
+        action="store_true",
+    )
+
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = get_args()
-    # print(args)
+    if args.validate:
+        print(args)
 
     # Get all CJSON files in dir
     file_list = recursive_search(args.directory)
     cjson_list = [f for f in file_list if f.suffix == ".cjson"]
 
-    flatten_all(cjson_list, args.minimize, args.round_coords)
+    flatten_all(cjson_list, args.minimize, args.round_coords, args.validate)
