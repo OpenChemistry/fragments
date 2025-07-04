@@ -161,7 +161,7 @@ Script to flatten CJSON files of structure templates for Avogadro2""",
 Define explicitly the number of decimals of atomic coordinates to round
 to.  If you choose 0 (zero), the coordinates are not rounded.""",
         type=int,
-        default=5,
+        default=4,
     )
 
     return parser.parse_args()
