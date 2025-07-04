@@ -103,27 +103,30 @@ def flatten_all(
     for file in cjson_list:
         with open(file, "r", encoding="utf-8") as f:
             cjson = json.load(f)
-        # print(cjson)
+            if validate:
+                print(f"\nread:\n{cjson}")
         if minimize:
             cjson = minimal(cjson)
-        # print(cjson)
+            if validate:
+                print(f"\nminimized:\n{cjson}")
         if round_coords_places:
             cjson = round_coords(cjson, round_coords_places)
-        # print(cjson)
+            if validate:
+                print(f"\nrounded:\n{cjson}")
         flattened = flatten_dumps(cjson)
-        # print(cjson)
-        # print(flattened)
+        if validate:
+            print(f"\nflattened:\n{cjson}")
+            print(f"\noutput:\n{flattened}")
         with open(file, "w", encoding="utf-8") as f:
             f.write(flattened)
-#        if validate:
-#            # Test we get the same object back as we originally read
-#            check = (cjson == json.loads(flattened))
-#            checks[file] = check
-#            if check is False:
-#                print(f"{file} was not validated")
-
-#    if validate:
-#        print(checks)
+        if validate:
+            # Test we get the same object back as we originally read
+            check = cjson == json.loads(flattened)
+            checks[file] = check
+            if check is False:
+                print(f"{file} was not validated")
+    if validate:
+        print(checks)
 
 
 def get_args():
@@ -156,6 +159,13 @@ to.  If you choose 0 (zero), the coordinates are not rounded.""",
         default=4,
     )
 
+    parser.add_argument(
+        "-v",
+        "--validate",
+        help="equally display intermediate results",
+        action="store_true",
+    )
+
     return parser.parse_args()
 
 
@@ -167,4 +177,4 @@ if __name__ == "__main__":
     file_list = recursive_search(args.directory)
     cjson_list = [f for f in file_list if f.suffix == ".cjson"]
 
-    flatten_all(cjson_list, args.minimize, args.round_coords)
+    flatten_all(cjson_list, args.minimize, args.round_coords, args.validate)
