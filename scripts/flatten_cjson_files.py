@@ -98,41 +98,47 @@ def round_coords(cjson: dict, places: int) -> dict:
 
 def flatten_all(
     cjson_list: list[Path],
+    dryrun: bool,
     minimize: bool,
-    round_coords_places: int | None = None,
+    round_coords_places: int,
     validate: bool = False,
 ):
     """Flatten a list of CJSON files according to the parameters set."""
     checks = {}
-
     # Read then write each cjson
     for file in cjson_list:
         with open(file, "r", encoding="utf-8") as f:
             cjson = json.load(f)
             if validate:
                 print(f"\nread:\n{cjson}")
+
         if minimize:
             cjson = minimal(cjson)
             if validate:
                 print(f"\nminimized:\n{cjson}")
+
         if round_coords_places:
             cjson = round_coords(cjson, round_coords_places)
             if validate:
                 print(f"\nrounded:\n{cjson}")
+
         flattened = flatten_dumps(cjson)
+
         if validate:
             print(f"\nflattened:\n{cjson}")
             print(f"\noutput:\n{flattened}")
-        with open(file, "w", encoding="utf-8") as f:
-            f.write(flattened)
-        if validate:
+
             # Test we get the same object back as we originally read
             check = (cjson == json.loads(flattened))  # fmt: skip # noqa
             checks[file] = check
             if check is False:
                 print(f"{file} was not validated")
-    if validate:
-        print(checks)
+
+        if dryrun:
+            print(flattened)
+        else:
+            with open(file, "w", encoding="utf-8") as f:
+                f.write(flattened)
 
 
 def get_args():
@@ -146,6 +152,13 @@ Script to flatten CJSON files of structure templates for Avogadro2""",
         "directory",
         help="Directory of files to process",
         type=Path,
+    )
+
+    parser.add_argument(
+        "-d",
+        "--dryrun",
+        help="Enable a dryrun mode which does not modify the files",
+        action="store_true",
     )
 
     parser.add_argument(
@@ -187,4 +200,6 @@ if __name__ == "__main__":
     file_list = recursive_search(args.directory)
     cjson_list = [f for f in file_list if f.suffix == ".cjson"]
 
-    flatten_all(cjson_list, args.minimize, args.round_coords, args.validate)
+    flatten_all(
+        cjson_list, args.dryrun, args.minimize, args.round_coords, args.validate
+    )
