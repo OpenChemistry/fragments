@@ -28,15 +28,15 @@ def svgDepict(mol):
     svg = d2d.GetDrawingText()
     return svg
 
-# repeat through all the files on the command-line
-# we can change this to use the glob module as well
-#  e.g., find all the files in a set of folders
+# repeat through all the files in this directory using glob
 for filename in glob.iglob("*.smi"):
 
     smiles = ''
     with open(filename) as f:
         smiles = f.read().strip()
-        smiles = '*' + smiles + '*'
+        # add initial '*' and end '*' if there aren't already attachment points
+        if (smiles.count('*') == 0):
+            smiles = '*' + smiles + '*'
 
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
@@ -51,4 +51,4 @@ for filename in glob.iglob("*.smi"):
         svg_file.write(svg)
 
     # save a PNG
-    cairosvg.svg2png(bytestring=svg, scale=2.0, write_to=name+".png")
+    # cairosvg.svg2png(bytestring=svg, scale=2.0, write_to=name+".png")
