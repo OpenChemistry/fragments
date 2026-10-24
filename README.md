@@ -48,6 +48,22 @@ If RDKit depictions need revision, edit the SVG file (or create a new one from
 a program like ChemDraw or ChemDoodle). The `svg2png.py` script uses `cairosvg`
 to generate a new PNG image with the appropriate resolution.
 
+### Amino acids
+
+The z-matrices in `amino/` used by the peptide builder are generated from the
+PDB Chemical Component Dictionary, so atom names match Avogadro's residue
+bond dictionary:
+
+```shell
+python scripts/getamino.py              # regenerate every amino/*.zmat
+python scripts/getamino.py TRP ARG      # just these residues
+python scripts/getamino.py --check      # validate the existing files
+```
+
+Do not edit these files by hand: the peptide builder relies on PDB atom names
+and on the row order (see the notes at the top of the script), and `--check`
+will catch most mistakes.
+
 ## Manual Creation of Ligands
 
 In some cases, the geometry produced by the scripts is poor and a ligand or
